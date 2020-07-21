@@ -58,8 +58,6 @@ class DataHandle(Database):
 
         sql = "insert into history (word,user_id) values(%s,%s);"
 
-
-
         sql = "select mean from words where word=%s;"
         self.cursor.execute(sql,[word])
         r = self.cursor.fetchone()
