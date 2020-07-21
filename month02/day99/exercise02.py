@@ -1,3 +1,7 @@
+"""
+爬虫实例.
+"""
+
 import requests
 import re
 url = "https://movie.douban.com/chart"
