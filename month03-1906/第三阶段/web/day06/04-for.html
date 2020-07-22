@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+    var arr=[2,3,4,5]
+
+    // for(xxx in arr){
+    //     console.log(arr[xxx]);
+    // }
+
+    //使用for语句计算1加到100的和
+    var s=0,i=1;
+    for(;i<=100;i++){
+
+        // if(i==11)
+        //    break;
+
+        //计算奇/偶数的值
+        if(!(i%2==0))
+           continue;
+        s+=i;
+    }
+    document.write(s);
+    </script>
+</body>
+</html>

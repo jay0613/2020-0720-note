@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- 写了下面这一段，可以直接无缝切换到移动端打开，宽度等等比例直接适配 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- em相对于父元素的尺寸；此处没有div2的父元素；div1>div找到div(里面的样式意思是：宽和高都是父的20%)-->
+    <style>
+        #div1{
+            width:100px;
+            height: 50px;
+            background-color: red;
+        }
+        #div2{
+            width:20em;
+            height: 10px;
+            background-color:blue;
+        }
+        #div1>div{
+            width: 20%;
+            height: 20%;
+            background-color:#fff;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <div></div>
+    </div>
+    <div id="div2"></div>
+</body>
+</html>

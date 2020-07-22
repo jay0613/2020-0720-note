@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="tip">...</div>
+    <script>
+        // 定义一个带名称参数的函数
+    //  function hi(name,age){
+    //      return name+",hello,你的年龄是："+age
+    //  }
+    // //  获取指定id号元素对象并保存在变量中
+    // var objTip=document.getElementById("tip");
+    // // 设置元素对象中的内容
+    // objTip.innerText=hi("张三","18");
+
+    // 函数定义方式一
+        // function ab(){
+        //     return "ok"
+        // }
+        // function cd(){
+        //     return"no"
+        // }
+    // 函数定义方式二 和方式一同样的功能（这种方法比较主流）  扩展的JSON格式对象函数
+        var log={
+            ab:function(){
+                return "ok"
+            },
+            cd:function(){
+                return "no"
+            }
+        }
+        document.getElementById("tip").innerText=log.ab();
+        // 定义一个带参数的匿名函数(会立刻执行)
+    // (function(name,age){
+    //     var str=name+",hello,你的年龄是："+age
+    //     objTip=document.getElementById("tip");
+    //     objTip.innerText=str;
+    // })("李四","19")
+    </script>
+</body>
+</html>

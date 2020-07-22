@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- text-align: center;居中;   hover鼠标滑过后变成的状态   :focus 点中他就会变成里面的样式
+    active鼠标按住不放的样式-->
+    <style>
+    .box{
+        width: 260px;
+        background-color: blue;
+        color: white;
+        text-align: center;
+    }
+    .box:hover{
+        background-color: green;
+    }
+    #name:focus{
+        background-color: red;
+    }
+    a:hover{
+        color: blue;
+    }
+    a:active{
+        color: red;
+    }
+    </style>
+</head>
+<body>
+    <!-- 有一个div元素，默认一个背景色，移动上后变成另外一个颜色 -->
+    <div class="box">
+        我会变背景色
+    </div>
+    <form action="#">
+        <label for="name">姓名：</label>
+        <input type="text" id="name" name="name">
+    </form>
+    <a href="https://www.baidu.com">百度</a>
+</body>
+</html>

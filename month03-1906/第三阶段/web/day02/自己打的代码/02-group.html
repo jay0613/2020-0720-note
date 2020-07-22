@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 群组选择器和后代选择器-->
+    <style>
+        div,p,h3{
+            color:orange;
+        }
+        p,h3,figure,ul,ol{
+            margin: 0;
+            padding: 0;
+        }
+        div p{color:orangered;
+
+        }
+        div p span{
+            color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div>今天</div>
+    <p>明天</p>
+    <h3>后天</h3>
+    <div>
+        <p>我是一个子类元素，上面的div p才能找到我
+            <span>我是一个孙类元素,需要设置样式得div p span才能找到我</span>
+        </p>
+    </div>
+</body>
+</html>

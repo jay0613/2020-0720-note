@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="tip">
+
+    </div>
+    <script>
+        // 严格区分大小写
+    a=1;
+    A=1;
+
+    // 定义一个变量
+    a1=2; //全局性
+    var a2=3; //页面局部变量
+    var a3,a4,a5; //可以先定义多个变量不赋值 
+    a3=4;a4=5;a5=6;//此时才赋值
+    var a6=a7=a8=0;
+    var a9=10,a10=11;
+
+    // 定义一个字符变量
+    var strName="tgrong"
+    // 查看变量类型
+    alert(typeof(strName))  // string   字符串类型
+    // 定义布尔类型
+    var isSave=false;
+    alert(typeof(isSave))  // boolean  布尔类型
+
+
+    // 定义一个常量
+    const PI=3.1415926;
+    // 只保留小数点后3位（四舍五入）并显示在页面
+    alert(PI.toFixed(3))  // 3.142
+    </script>
+    <script>
+        // 获取指定id的元素（也就是div元素）然后赋给a
+        a=document.getElementById("tip");
+        // a里面的文本内容设置为hello,world!
+        a.innerText="hello,world!";
+    </script>
+    <!--显示一个按钮“点我一下”，点击之后显示内容PI.toFixed(3);也就是3.142 -->
+    <button onclick="a=document.getElementById('tip');a.innerText=PI.toFixed(3);">点我一下</button>
+</body>
+</html>

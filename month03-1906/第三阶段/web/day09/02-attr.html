@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .bg{
+            background-color: blue;
+        }
+    </style>
+    <script src="js/jquery.min.js"></script>
+</head>
+<body>
+    <!-- 1.点击按钮，获取文本框中输入内容
+         2.显示在 div 元素中 -->
+    <!-- <input id="txt" type="text">
+    <div><button id="btn">获取值</button></div>
+    <div id="tip">...</div> -->
+
+    <!-- <input type="checkbox" id="aa">
+
+    <button id="bb">获取</button> -->
+     
+    <p id="p1" class="bg">强悍的jQuery</p>
+
+
+    <script>
+        $("#p1").on("click",function(){
+            $(this).removeAttr("class");
+        })
+        // $("#bb").on("click",function(){
+        //   console.log($("#aa").attr("checked")); 
+        //   console.log($("#aa").prop("checked")); 
+        // })
+    //    $("#btn")[0].onclick=function(){
+    //        console.log($("#txt").val());
+    //        //取出内容并赋值给tip元素
+    //        $("#tip").text($("#txt").val())
+    //    }
+    </script>
+</body>
+</html>

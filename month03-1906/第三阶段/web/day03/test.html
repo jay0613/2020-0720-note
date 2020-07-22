@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 使用内嵌的方式添加样式 -->
+    <style>
+       /* div{
+           border: solid 1px red;
+           width: 50px;
+       }
+       div:nth-child(1){
+           margin-left:10px;
+           float:left;
+       } */
+       #div1{
+           width: 200px;
+           border: solid 1px red;
+           overflow: hidden;
+           /* 包含 */
+       }
+       #l{
+           float: left;
+       }
+       #r{
+           float: right;
+       }
+    </style>
+</head>
+<body>
+    <!-- <div>今天</div>
+    <div style="clear: left">明天</div> -->
+
+    <div id="div1">
+        <div id="l">今天</div>
+        <div id="r">明天</div>
+    </div>
+    <div>后天</div>
+</body>
+</html>

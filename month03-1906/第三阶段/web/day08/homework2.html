@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" onsubmit="return sub();">
+        <div>输入用户名：</div>
+        <input type="text" id="username" name="username">
+        <div>
+            <input type="submit" value="提交">
+        </div>
+    </form>
+    <script>
+        //定义一个提交时的函数
+        function sub() {
+            //如果输出框的内容为空
+            if (document.getElementById("username").value == ""){
+                alert("用户名不能空！");
+                //文本输入框获取焦点
+                document.getElementById("username").focus();
+                return false;
+            }    
+            else
+                return true;
+        }
+    </script>
+</body>
+
+</html>

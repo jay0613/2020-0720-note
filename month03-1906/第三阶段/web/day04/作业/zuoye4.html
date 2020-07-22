@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #cart{
+            border: solid 1px #ccc;
+            background-color: #EEE;
+            text-align: center;
+            padding: 15px 0;
+            width: 200px;
+            margin: 0 auto;
+            /* 相对定位 */
+            position:relative; 
+        }
+        #cart>span{
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            background-color: red;
+            color: white;
+            /* 绝对定位 */
+            position:absolute;
+            top: -5px;
+            border-radius: 10px 10px 10px 0;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="cart">
+        我的购物车
+        <span>1</span>
+    </div>
+</body>
+</html>

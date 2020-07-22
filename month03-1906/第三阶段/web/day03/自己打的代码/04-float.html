@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!--  dashed 虚线 float:left本来竖着向下排列，变成横着排列-->
+    <!-- 此处子元素全部设置浮动，导致父元素高度为0，影响
+        父元素背景色和背景图片展示,影响页面布局，解决办法看方式一二三 -->
+    <!-- 方式三：overflow:hidden; 专用于解决高度为0情况 -->
+    <style>
+        #parent{
+            width: 408px;
+            /* 方式一：height: 102px; */
+            border: solid 1px red;
+            margin: 0 auto;
+            overflow:hidden;
+        }
+        #parent .child{
+            width: 100px;
+            height: 100px;
+            border: dashed 1px #666;
+            float:left
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <!-- 方式二：<div style="clear:left;"></div> -->
+    </div>
+    <div>今天天气很好</div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人资料</title>
+    <style>
+        /* border: solid添加外边框 */
+        /* box-shadow添加阴影 */
+        /*  margin: 0px auto; 整体居中*/
+        #reg{
+            width: 296px;
+            border: solid 1px #ccc;
+            padding: 8px;
+            box-shadow: 5px 5px 25px #ccc;
+            margin: 0px auto;
+        }
+        .center{
+            /* 水平居中 */
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="reg">
+        <h3>用户注册</h3>
+        <form action="#">
+            <div>
+                <label for="name">姓名</label>
+                <input type="text" 
+                        id="name" 
+                        placeholder="请输入用户名" 
+                        name="name">
+            </div>
+            <div>
+                <label for="pass">密码</label>
+                <input type="password" 
+                        id="pass" 
+                        placeholder="请输入密码" 
+                        name="pass">
+            </div>
+            <div>
+                <label for="marry">婚否</label>
+                <input type="checkbox" 
+                        name="marry" 
+                        id="marry" >
+            </div>
+            <div>
+                <label for="sex1">性别</label>
+                <input type="radio" id="sex1" name="sex" value="1" checked>男
+                <input type="radio" id="sex2" name="sex" value="2">女
+            </div>
+            <div>
+                <label for="xl">学历</label>
+                <select name="xl" id="xl">
+                    <option value="0">请选择</option>
+                    <option value="1">大专</option>
+                    <option value="2">本科</option>
+                    <option value="3">硕士</option>
+                    <option value="4">博士</option>
+                </select>
+            </div>
+            <div>
+                <label for="demo">简介</label>
+                <textarea name="demo" id="demo" cols="30" rows="10"></textarea>
+            </div>
+            <div class="center">
+                <input type="submit" value="提交">
+                <input type="reset" value="重置">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #pic{
+            width: 300px;
+            margin: 0 auto;
+            border: solid 0px red;
+        }
+        #pic input{
+            margin-left: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div id="pic">
+        <div class="img">
+            <img id="img" width="300px" height="350px" src="imgs/j.jpg" alt="">
+        </div>
+        <!-- 分组元素fieldset  自带边框 -->
+        <fieldset>
+            <!--legend分组元素的标题 -->
+            <legend>选择按钮</legend>  
+            <!-- radio单选按钮可以对相同name的相互排斥，只能选一个 -->
+            <input type="radio" name="pic" id="pic1">
+            <!-- checked默认选中 -->
+            <input checked type="radio" name="pic" id="pic2">
+            <input type="radio" name="pic" id="pic3">
+            <input type="radio" name="pic" id="pic4">
+        </fieldset>
+    </div>
+    <script>
+        // 分别获取单选按钮对象，并分别保存在变量中
+        var btnPic1=document.getElementById("pic1")
+        var btnPic2=document.getElementById("pic2")
+        var btnPic3=document.getElementById("pic3")
+        var btnPic4=document.getElementById("pic4")
+        // 获取id为img的img对象
+        var imgShow=document.getElementById("img")
+        // 绑定元素的单击事件
+        btnPic1.onclick=function(){
+            // 改变图片的获取路径
+            imgShow.src="imgs/e.jpg"
+        }
+        btnPic2.onclick=function(){
+            // 改变图片的获取路径
+            imgShow.src="imgs/j.jpg"
+        }
+        btnPic3.onclick=function(){
+            // 改变图片的获取路径
+            imgShow.src="imgs/o.jpg"
+        }
+        btnPic4.onclick=function(){
+            // 改变图片的获取路径
+            imgShow.src="imgs/r.jpg"
+        }
+    </script>
+</body>
+</html>

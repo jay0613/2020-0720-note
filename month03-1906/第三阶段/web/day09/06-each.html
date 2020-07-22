@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery.min.js"></script>
+</head>
+<body>
+    <ul>
+        <li>aa</li>
+        <li>bb</li>
+        <li>cc</li>
+        <li>dd</li>
+        <li>ee</li>
+    </ul>
+    <script>
+    var arr=[2,5,6,7]
+    //使用选择器获取全部的表项对象，并保存在变量中
+    var lis=$("ul>li");
+    
+    //输出每个元素对象
+    lis.each(function(i,ele){
+        console.log(i,ele)
+    })
+
+    //专门的遍历数据函数
+    $.each(arr,function(i,v){
+        console.log(i,v)
+    })
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 固定宽度元素的居中实现方式：margin: 0 auto; -->
+    <!-- text2是由4个三角形拼成的正方形 border-bottom-color最下面三角形的颜色(只有设置边框属性很高时候撑出来的图形才可以用这个函数)   ransparent透明 -->
+    <!-- solid实线边框  border-radius指定圆角半径  (半径越大看起来越圆,半径等于长宽的一半时候就是圆) -->
+    <!-- border-radius:50%;是相对于设置的100的宽高的50%，此时50%等于50px -->
+    <!-- outline: none;轮廓线取消(选中才会出来的外框线) -->
+    <style>
+        #text{
+            /* 这是一个圆 */
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            margin: 0 auto;
+            border:2px solid blue;
+            border-radius:50%;
+
+        }
+        #text2{
+            /* 这是一个绿色三角形 */
+            width: 0;
+            height: 0;
+            margin: 0 auto;
+            border: 50px solid blue;
+            border-bottom-color: transparent;
+            border-left-color: transparent;
+            border-right-color: transparent;
+        }
+        #text3{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin: 0 auto;
+            border: 2px solid #fff;
+            border-radius: 50% 12px 62px 100px;
+        }
+        input{
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="text">
+        aaa
+    </div>
+    <div id="text2">
+        bbb
+    </div>
+    <div id="text3">
+        ccc
+    </div>
+    <input type="text">
+    <input type="submit" value="提交">
+    <input type="button" value="操作">
+</body>
+</html>

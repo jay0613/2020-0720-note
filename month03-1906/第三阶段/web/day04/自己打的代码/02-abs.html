@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 绝对定位 -->
+    <style>
+        #parent{
+            width: 300px;
+            height: 300px;
+            border: solid 1px orangered;
+            /* 居中 */
+            margin: 0 auto;
+            position:relative;
+        }
+        #parent>#child{
+            width: 284px;
+            height: 35px;
+            background-color:rgba(0,0,255, 0.2);
+            /* 绝对定位 此处是相对父元素来定位偏移*/
+            position:absolute; 
+            left: 8px; /* 向右偏移8px */
+            /* 以底部为参照向上偏移0px */
+            bottom: 0;
+            color: #fff;
+            text-align: center;
+        }
+        img{
+            /* 相对于父元素的100% */
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <img src="tupian/a.jpg" alt="查找不到才会提示的信息">
+        <div id="child">这是一个美女</div>
+    </div>
+</body>
+</html>

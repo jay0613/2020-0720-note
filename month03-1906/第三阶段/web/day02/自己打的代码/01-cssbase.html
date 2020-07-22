@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--link引入外部样式表-->
+    <link rel="stylesheet" href="css/index.css">
+    <!--*代表所有元素，margin元素外边距（等于0时，使元素四周边距为0）查找id时候前面加#+id值，查找class时候前面加.+class值-->
+    <style>
+        #div2{
+        color:red;
+        }
+        *{
+        margin:0;
+        padding:0;
+        }
+        .blue{
+        color:blue;
+        }
+    </style>
+</head>
+<body>
+    <p id="p1">
+        今天天气真热
+    </p>
+    <div id="div1">
+        明天可能会下雨
+        <div>我是一个子类元素</div>
+    </div>
+    <p id="p2">
+        后天又是一个大晴天
+    </p>
+    <!--就近原则，会优先使用style="color:blue;"，而不会在有样式冲突时候使用上面的color:red;，更不会使用link导入的样式-->
+    <div id="div2" style="color:blue;">我是一个测试样式优先级内容</div>
+    <div class="blue">今天</div>
+    <p class="blue">明天</p>
+    <h3 class="blue">后天</h3>
+</body>
+</html>

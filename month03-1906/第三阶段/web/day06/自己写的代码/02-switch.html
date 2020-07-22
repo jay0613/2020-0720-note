@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="sw">
+        <!-- range:设置为拖动元素默认拖动步长为1   value="3"默认初始值为3-->
+        <!-- onchange 两次输入内容发生变化时触发,或元素状态改变时触发 -->
+        <input type="range" id="num" min="1" max="10" value="3">
+        <div id="tip">
+
+        </div>
+        <img id="img1" src="imgs/e.jpg" alt="">
+    </div>
+    <script>
+        // 获取元素对象，并保存在变量a中
+        var a=document.getElementById("num")
+        // 获取元素对象，用作（b.innerText）在页面中显示内容
+        var b=document.getElementById("tip")
+        // 对象绑定onchange事件； onchange：绑定对象的value值改变就会触发
+        a.onchange=function(){
+            // console.log(a.value);
+            b.innerText=a.value;
+            switch(a.value){
+                // 当a.value的值等于1时，执行console.log("你好")
+                case "1" : console.log("你好");
+                break;
+                case "2" :console.log("我好");
+                break;
+                case "3" :console.log("大家好");
+                break;
+                case "4" :console.log("杰杰好");
+                break;
+                // 图片隐藏
+                case "5" :document.getElementById("img1").style.display="none";
+                break;
+                default:console.log("还没写好的内容");
+                break;
+            }
+
+        }
+    </script>
+</body>
+</html>

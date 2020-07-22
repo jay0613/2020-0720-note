@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul{
+            width: 554px;
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            border:solid 3px #666
+        }
+        ul li{
+            overflow: hidden;
+        }
+        ul li span{
+            float: left;
+            border-right: solid 1px #EAF4F3;
+            border-bottom: solid 1px #EAF4F3;
+            height: 23px;
+            line-height: 23px;
+            width: 90px;
+            padding: 5px 10px;
+        }
+        ul li span:last-child{
+            border-right:0;
+        }
+        ul .focus{
+            background-color: #ccc;
+            color:#fff;
+        }
+    </style>
+    <script src="js/jquery.min.js"></script>
+</head>
+<body>
+    <ul>
+        <li>
+            <span>Product</span>
+            <span>Price</span>
+            <span>ID Code</span>
+            <span>Quality</span>
+            <span>Exp Date</span>
+        </li>
+        <li class="focus">
+            <span>Pro 1</span>
+            <span>51$</span>
+            <span>4587</span>
+            <span>Good</span>
+            <span>02/01/2009</span>
+        </li>
+        <li>
+                <span>Pro 1</span>
+                <span>51$</span>
+                <span>4587</span>
+                <span>Good</span>
+                <span>02/01/2009</span>
+        </li>
+        <li>
+                <span>Pro 1</span>
+                <span>51$</span>
+                <span>4587</span>
+                <span>Good</span>
+                <span>02/01/2009</span>
+        </li>
+        <li>
+                <span>Pro 1</span>
+                <span>51$</span>
+                <span>4587</span>
+                <span>Good</span>
+                <span>02/01/2009</span>
+        </li>
+        <li>
+                <span>Pro 1</span>
+                <span>51$</span>
+                <span>4587</span>
+                <span>Good</span>
+                <span>02/01/2009</span>
+        </li>
+        <li>
+                <span>Pro 1</span>
+                <span>51$</span>
+                <span>4587</span>
+                <span>Good</span>
+                <span>02/01/2009</span>
+        </li>
+    </ul>
+    
+    <script>
+    $("li:not(:first-child)").each(function(i,e){
+        $(e).on("mouseover",function(){
+             $(this).addClass("focus")
+        })
+        $(e).on("mouseout",function(){
+             $(this).removeClass("focus")
+        })
+    })
+    
+    </script>
+</body>
+</html>

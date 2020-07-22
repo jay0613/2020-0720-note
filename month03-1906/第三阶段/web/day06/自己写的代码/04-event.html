@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 单击按钮使背景变色 -->
+    <style>
+        fieldset{
+            width: 200px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- 分组元素fieldset  自带边框 -->
+    <fieldset>  
+        <!--legend分组元素的标题 -->
+        <legend>控制页面背景色</legend>
+        <div class="btns">
+            <button id="red">红色</button>
+            <button id="blue">蓝色</button>
+            <button id="green">绿色</button>
+        </div>
+    </fieldset>
+    <script>
+        //找到全部按钮元素，并分别保存在变量中
+        var btnRed=document.getElementById("red")
+        var btnBlue=document.getElementById("blue")
+        var btnGreen=document.getElementById("green")
+        // 绑定按钮元素的单击事件
+        btnRed.onclick=function(){
+            // 使元素背景色变红
+            // document.body是最大的元素
+            document.body.style.backgroundColor="red"
+        }
+        btnBlue.onclick=function(){
+            // 使元素背景色变蓝
+            // document.body是最大的元素
+            document.body.style.backgroundColor="blue"
+        }
+        btnGreen.onclick=function(){
+            // 使元素背景色变绿
+            // document.body是最大的元素
+            document.body.style.backgroundColor="green"
+        }
+    </script>
+</body>
+</html>

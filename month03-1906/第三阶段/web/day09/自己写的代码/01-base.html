@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!--浏览器遇到script标签会看有没有src如果有则；
+        1.寻找目标文件
+        2.下载文件
+        3.解析文件  -->
+</head>
+<body>
+    <div id="tip">hello,world!</div>
+    <!-- 添加一个id为marry的选项   checked选中状态 -->
+    <input type="checkbox" checked name="marry" id="marry">婚否    <!-- 导入jq框架 -->
+    <script src="js/jquery.min.js"></script>
+    <script>
+        // $("#tip")返回jq对象       原生对象---> #tip
+        console.log($("#tip"));
+        // 输出dom对象(这是原生对象)
+        console.log(document.getElementById("tip"));
+        // 把原生对象转成jq对象     原生对象--> document.getElementById("tip")
+        console.log($(document.getElementById("tip")));
+        // 把jq对象转原生对象
+        console.log($("#tip")[0]);
+
+        // 1.获取jq选择器获取元素
+        // 2.改变元素显示的内容
+        $("#tip").html("<b>今天天气很好</b>")  //今天天气很好
+        $("#tip").text("<b>今天天气很好</b>")  //<b>今天天气很好</b>
+
+        console.log($("#tip").attr("id"));    //tip
+
+        // 获取jq对象的选中状态，已选中的时候返回true，否则返回false
+        console.log($("#marry").prop("checked"));  //true
+    </script>
+</body>
+</html>

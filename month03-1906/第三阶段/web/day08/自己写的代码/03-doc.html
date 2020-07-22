@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <p class="p1">4</p>
+    <p class="p1">5</p>
+    <p class="p1">6</p>
+
+    <input type="text">
+    <span>1</span>
+    <span>2</span>
+
+    <script>
+        var inputs=document.getElementsByTagName("input")
+        var spans=document.getElementsByTagName("span")
+        // 在输入框输入内容的同时在两个span框内显示
+        // oninput事件在用户输入时触发
+        inputs[0].oninput=function(){
+            spans[0].innerText=inputs[0].value;
+            spans[1].innerText=inputs[0].value;
+        }
+
+
+
+
+        // 获取标签名称集合
+        var divs=document.getElementsByTagName("div");
+        // 在控制台输出标签名集合
+        console.log(divs);
+        // 在控制台输出第2个节点
+        console.log(divs[1])   //<div>2</div>
+
+        // 获取类别名称集合
+        var ps=document.getElementsByClassName("p1")
+        console.log(ps)
+        // 在控制台输出第三个节点
+        console.log(ps[2])  //<p class="p1">6</p>
+    </script>
+</body>
+</html>

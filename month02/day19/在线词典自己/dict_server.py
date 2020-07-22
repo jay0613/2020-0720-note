@@ -30,9 +30,14 @@ def do_login(connfd,name,passwd):
     else:
         connfd.send(b"FAIL")
 
+# 查询单词
+def do_query(connfd, word,name):
+    # 插入历史
+    db.insert_history(word,name)
+    # 查询单词
+    result = db.query(word)
+    connfd.send(result.encode())
 
-def do_query(connfd, word):
-    pass
 
 # 处理客户端请求 子进程执行
 def do_request(connfd):
@@ -50,7 +55,7 @@ def do_request(connfd):
             # tmp--> [L,name,passwd]
             do_login(connfd,tmp[1],tmp[2])
         elif tmp[0]== "Q":
-            do_query(connfd,tmp[1])
+            do_query(connfd,tmp[1],tmp[2])
 
     db.cursor.close()
     connfd.close()
@@ -58,9 +63,10 @@ def do_request(connfd):
 def main():
     # tcp套接字创建
     sock = socket()
+    sock.setsockopt(SOL_SOCKET, SO_REUSEADDR, 1)
     sock.bind(ADDR)
     sock.listen(5)
-    print("Listen the port %s"%PORT)
+    print("Listen the port %d" % PORT)
     signal.signal(signal.SIGCHLD,signal.SIG_IGN) # 处理僵尸进程
 
     # 循环连接客户端

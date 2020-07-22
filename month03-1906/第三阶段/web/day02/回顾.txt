@@ -1,0 +1,128 @@
+1.页面
+   什么
+   环境
+      - 编辑器 IDE
+      - Jq     2.0   ------  ie不再支持
+      - chrome
+2. 组成
+    元素（标记、标签）
+    结构
+    HTML
+         head
+             不显示在页面中，仅描述页面特点。
+         body
+             显示页面的内容
+             文本
+                 h1-6
+                 p
+                   b strong
+                 span
+                 label
+                 a
+                 img  
+ 
+             框架 
+                 div
+
+             结构
+                 列表
+                     ul,ol,li
+                 表格
+                     table
+             表单
+                 form
+                     表单控件
+             补充
+                  包含图片
+                  加载第三方页面
+
+
+
+
+                  块元素
+                      div,h,p,ul,table,li iframe
+                  内联元素
+                      span,label,a,img,input
+                  
+                  转换
+                       display:  inline /  inline-block /  block
+
+
+
+
+             简单
+
+
+
+
+
+
+
+
+
+
+                 strName
+                 isHave
+
+
+结构
+  块思想
+  ---w330px  
+  ---b182px
+  ---#008123
+步骤
+   1.创建一个页面。
+   2.添加页面元素。
+   3.编写页面样式。
+   4.调优代码。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

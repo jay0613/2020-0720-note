@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #imgs {
+            border: solid 1px red;
+            width: 430px;
+        }
+
+        #imgs .title {
+            overflow: hidden;
+            padding: 8px 10px;
+        }
+
+        #imgs .title h3 {
+            float: left;
+            padding: 0;
+            margin: 0;
+        }
+
+        #imgs .title a {
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="imgs">
+        <div class="title">
+            <h3>图片</h3>
+            <a id="a1" href="javascript:;">换一换</a>
+        </div>
+        <div id="con">
+            <img src="../imgs/bk0-8.jpg" alt="">
+            <img src="../imgs/bk1-8.jpg" alt="">
+        </div>
+    </div>
+    <script>
+        var a1 = document.getElementById("a1");
+        //定义一个保存图片地址的数组
+        var arrImg = ["../imgs/bk0-8.jpg",
+            "../imgs/bk1-8.jpg",
+            "../imgs/bk2-8.jpg",
+            "../imgs/bk3-8.jpg",
+            "../imgs/bk5-8.jpg",
+            "../imgs/bk6-8.jpg",
+            "../imgs/bk7-8.png",
+            "../imgs/bk8-8.jpg",
+            "../imgs/bk9-8.jpg",
+        ]
+        a1.onclick = function () {
+            var arr = [];
+            for (var i = 0; i < 2; i++) {
+                //随机生成一个指定数组长度的随机数
+                var k = Math.floor(Math.random() * arrImg.length);
+                //console.log(i);
+                //放入数组
+                arr.push(k);
+            }
+            //定义图片模板
+            var HTML = '<img src="' + arrImg[arr[0]] + '" alt="">' +
+                '<img src="' + arrImg[arr[1]] + '" alt="">'
+            document.getElementById("con").innerHTML = HTML;
+            //显示数组
+            console.log(arr.toString());
+        }
+    </script>
+</body>
+
+</html>

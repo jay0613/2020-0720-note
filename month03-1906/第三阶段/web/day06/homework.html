@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 使用内嵌的方式编写样式 -->
+    <style>
+        #p1{
+            width: 300px;
+            border:solid 1px red;
+            padding: 8px;
+        }
+        #p1 .focus{
+            color:#000;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="p1">
+        <div class="nav">
+            <!-- ?如何使A标签不跳转,加上javascript:;表示，不做跳转，仅是在当前页执行js代码 -->
+            <a href="javascript:;">大</a>
+            <a href="javascript:;">中</a>
+            <a href="javascript:;" class="focus">小</a>
+        </div>
+        <p id="p2">
+            函数名自定义，见名知意，命名规范参照变量的命名规范。普通函数以小写字母开头，用于区分构造函数(构造函数使用大写字母开头，定义类)
+        </p>
+    </div>
+    <!-- 使用内嵌的方式编写js代码 -->
+    <script>
+        // 使用标签名获取元素列表，保存到变量中
+        var links=document.getElementsByTagName("a");
+        // 绑定第一个元素的事件
+        links[0].onclick=function(){
+            //清除其他选中样式
+            clearFocus();
+            //使自身获取焦点样式
+            this.className="focus";
+            //将段落元素中的字体变成20px
+            document.getElementById("p2").style.fontSize="20px"
+        }
+        links[1].onclick=function(){
+            //清除其他选中样式
+            clearFocus();
+            //使自身获取焦点样式
+            this.className="focus";
+            //将段落元素中的字体变成20px
+            document.getElementById("p2").style.fontSize="18px"
+        }
+        links[2].onclick=function(){
+            //清除其他选中样式
+            clearFocus();
+            //使自身获取焦点样式
+            this.className="focus";
+            //将段落元素中的字体变成20px
+            document.getElementById("p2").style.fontSize="16px"
+        }
+
+        //自定义一个清除全部选中焦点的样式
+        function clearFocus(){
+            for(var i=0;i<links.length;i++){
+                links[i].className="";
+            }
+        }
+    
+    </script>
+</body>
+</html>

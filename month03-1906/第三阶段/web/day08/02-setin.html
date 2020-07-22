@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">点我就增加</button>
+    <div id="tip"></div>
+    <script>
+     //定义一个初始的变量
+     var i=0;
+     //绑定事件
+     document.getElementById("btn").onclick=function(){
+         //i增加1
+         i++;
+         //找到元素并赋值
+         document.getElementById("tip").innerText=i;
+     }
+     //click()等价于用户的单击事件的行为
+     var task=window.setInterval(function(){
+        document.getElementById("btn").click();
+        //结束周期性的定时器
+        if(i==11)
+           window.clearInterval(task);
+     },1000)
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a=2;
+        var b=5;
+        console.log(++a);   // 3
+        console.log(b++);  // 5   ++在后面的时候，先不做运算在下一步才会运算，所以下一行等于6
+        console.log(b)  // 6
+
+
+        var b="A",c="a"
+        // 查看b里面第一个字母A的Unicode码的值
+        console.log(b.charCodeAt(0)) //65
+        // 查看c里面第一个字母a的Unicode码的值
+        console.log(c.charCodeAt(0)) //97
+        console.log(b>c)  //false
+    </script>
+</body>
+</html>

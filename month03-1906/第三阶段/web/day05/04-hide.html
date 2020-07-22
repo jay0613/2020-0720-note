@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            /* 不显示 */
+            /* display: none; */
+        }
+    </style>
+</head>
+<body>
+    <!-- 添加一个div元素 -->
+    <div id="test">
+        今天的天气很好
+    </div>
+    <!-- 1.找到元素
+         2.将元素的display属性值设置为none -->
+
+    <!-- 使用内嵌的方式编写JS代码 -->
+    <script>
+       var test=document.getElementById("test");
+       //    设置隐藏的样式属性
+       test.style.display="none";
+    </script>
+</body>
+</html>

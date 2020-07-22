@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+      document.write((new Date()).getTime())
+      //找到地址栏对象
+      //var his=window.history;
+      //通过属性获取url地址信息
+      //var url=his.href;
+      //输出在页面中
+      //document.write(window.location.href);
+
+      //设置当前的地址信息
+      //window.location.href="https://www.baidu.com"
+      setTimeout(function(){
+        window.location.reload();
+      },3000)
+      
+    </script>
+</body>
+</html>

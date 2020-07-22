@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #pics{
+            border: solid 1px red;
+            margin: 0 auto;
+            width: 300px;
+            text-align: center;
+        }
+    </style>
+    <script src="../js/system.js"></script>
+</head>
+<body>
+    <div id="pics">
+        <div class="title">
+            <input id="open" checked type="checkbox">开启功能
+        </div>
+        <div class="con">
+            <img id="img" src="../imgs/img03-7.png" alt="">
+        </div>
+        <div class="rad">
+            <input id="a1" type="radio" checked name="rad">鼻子
+            <input id="a2" type="radio" name="rad">眼晴
+            <input id="a3" type="radio" name="rad">耳朵
+        </div>
+    </div>
+    <script>
+    $$("open").onclick=function(){
+        if(this.checked){
+            $$("a1").disabled=false;
+            $$("a2").disabled=false;
+            $$("a3").disabled=false;
+        }else{
+            $$("a1").disabled=true;
+            $$("a2").disabled=true;
+            $$("a3").disabled=true;
+        }
+    }
+    //优化，使用遍历的方式绑定事件
+    $$("a1").onclick=function(){
+        $$("img").setAttribute("src","../imgs/img03-7.png")
+    }
+    $$("a2").onclick=function(){
+        $$("img").setAttribute("src","../imgs/img02-7.png")
+    }
+    $$("a3").onclick=function(){
+        $$("img").setAttribute("src","../imgs/img01-7.png")
+    }
+    </script>
+</body>
+</html>

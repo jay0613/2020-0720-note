@@ -55,10 +55,23 @@ class DataHandle(Database):
             return False
 
     def query(self,word):
-
-        sql = "insert into history (word,user_id) values(%s,%s);"
-
         sql = "select mean from words where word=%s;"
         self.cursor.execute(sql,[word])
         r = self.cursor.fetchone()
-        return r
+        if r:
+            return r[0]
+        else:
+            return "No Found"
+
+    def insert_history(self,word,name):
+        sql1 = "select id from user where name=%s;"
+        id = self.cursor.execute(sql1,[name])
+        print(id)
+        try:
+            sql2 = "insert into history (word,user_id) values (%s,%d);"
+            self.cursor.execute(sql2, [word, id])
+            self.db.commit()
+        except:
+            self.db.rollback()
+
+

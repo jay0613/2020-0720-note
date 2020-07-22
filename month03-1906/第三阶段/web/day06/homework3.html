@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+       #pic{
+           width: 739px;
+           height: 419px;
+           border:solid 1px red;
+           position: relative;
+       }
+       #pic #ileft,#pic #iright{
+           position: absolute;
+           top:50%;
+           margin-top:-20px;
+       }
+       #pic #ileft{
+           left:0
+       }
+       #pic #iright{
+           right:0;
+       }
+    </style>
+</head>
+<body>
+    <div id="pic">
+         <img src="../imgs/gm1-6.jpg" 
+              alt="" 
+              id="img">
+         <img src="../imgs/l1-6.png" 
+              alt=""
+              id='ileft'>
+         <img src="../imgs/r1-6.png" 
+              alt=""
+              id="iright">
+    </div>
+    <script>
+       //使用数组保存全部的图片路径
+       var arr=["../imgs/gm1-6.jpg","../imgs/gm2-6.jpg","../imgs/gm3-6.jpg","../imgs/gm4-6.jpg","../imgs/gm5-6.jpg"]
+       //定义一个控制下标的变量
+       var i=0;
+       //获取左侧点击元素
+       document.getElementById("ileft").onclick=function(){
+           //如果是0,再向上，则重置为4
+           if(i==0) 
+             i=arr.length-1;
+           else{
+             //下标减1
+             i--;
+           }  
+           //通过下标获取数组中对应的图片地址
+           console.log(i)
+           document.getElementById("img").setAttribute("src",arr[i]);
+
+       }
+       //获取右侧点击元素
+       document.getElementById("iright").onclick=function(){
+           //下标加1
+           i++;
+           //如果超出数组的最大元素下标，重置为0
+           if(i==arr.length) i=0;
+           //通过下标获取数组中对应的元素
+           console.log(i);
+           document.getElementById("img").setAttribute("src",arr[i]);  
+       }
+    </script>
+</body>
+</html>

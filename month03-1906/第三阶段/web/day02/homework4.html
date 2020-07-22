@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 使用内嵌的方式编写样式 -->
+    <style>
+        ul{
+            margin: 0;
+            padding: 0;
+            width: 533px;
+            list-style-type:none;
+            border-top:solid 5px #ccc;
+            border-left:solid 1px #ccc;
+            border-right:solid 1px #ccc;
+            border-bottom: solid 1px #ccc;
+        }
+        ul li{
+            border-bottom:solid 1px #ccc;
+            margin: 0 10px;
+        }
+        ul .noline{
+            border: none;
+        }
+        ul span{
+            display: inline-block;
+            width: 60px;
+            text-align: center;
+            font-size: 20px;
+            /* 设置字体的加载 */
+            font-weight:bold;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><span>1</span>当页面标签的内容大小超出了标签的宽度</li>
+        <li><span>2</span>当页面标签的内容大小超出了标签的宽度</li>
+        <li><span>3</span>当页面标签的内容大小超出了标签的宽度</li>
+        <li class="noline"><span>4</span>当页面标签的内容大小超出了标签的宽度</li>
+    </ul>
+</body>
+</html>

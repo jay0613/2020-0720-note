@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+       #search{
+           width: 300px;
+           margin: 0 auto;
+           border: solid 1px #ccc;
+           padding: 20px 15px;
+       }
+       #search p span{
+           color:red;
+       }
+    </style>
+    <script src="../js/system.js"></script>
+</head>
+<body>
+    <!-- 块思想 -->
+    <div id="search">
+        <div>
+            <input id="txt" type="text">
+            <button id="btn">查询</button>
+        </div>
+        <p id="p1">
+            作用 : 根据正则表达式或字符串查找相关内容并进行替换
+            返回 : 替换后的字符串,不影响原始字符串
+        </p>
+    </div>
+    <!-- 使用内嵌的方式编写js代码 -->
+    <script>
+       //编写按钮的点击事件
+       $$("btn").onclick=function(){
+           var _txt=$$("txt").value;
+           console.log(_txt);
+           //将获取输入框中的值作为正则表达式需要查询的值
+           var reg=new RegExp(_txt,"ig");
+           //获取p元素中的内容
+           //console.log($$("p1").innerText.replace(reg,"<span>"+_txt+"</span>"))
+           //p元素中显示带标签符的内容
+           $$("p1").innerHTML=$$("p1").innerText.replace(reg,"<span>"+_txt+"</span>")
+       }
+    </script>
+</body>
+</html>

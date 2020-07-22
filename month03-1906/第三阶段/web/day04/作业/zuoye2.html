@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #instr{
+            width: 520px;
+            height: 404px;
+            margin: 0 auto;
+            text-align: center;
+            background-color: #efe7f2;
+            padding: 10px 0px 0px 0px;
+        }
+        /* nth-child(1)找到div里面的第一个*/
+        #instr>div:nth-child(1){
+            width: 125px;
+            height: 125px;
+            margin: 20px auto;
+            /* 表示这是个圆 */
+            border-radius: 50%;
+            border: solid 3px #fff;
+            /* 盒阴影 */
+            box-shadow: 2px 2px 5px #666;
+        }
+        #instr>div:nth-child(1)>img{
+            border-radius: 50%;
+        }
+        /* outline: none;轮廓线取消(选中才会出来的外框线)  */
+        .btns>input{
+            width: 135px;
+            height: 40px;
+            margin-right: 5px;
+            border: none;
+            outline: none;
+            color: #fff;
+        }
+        #instr>div{
+            margin: 5px 0;
+        }
+        .btns{
+            padding-top: 20px;
+        }
+        .btns>input:nth-child(1){
+            background-color: #00a9e1;
+        }
+        .btns>input:nth-child(2){
+            background-color: #00ba37;
+        }
+        .btns>input:nth-child(3){
+            background-color: #e30000;
+        }
+    </style>
+</head>
+<body>
+    <div id="instr">
+        <div>
+            <img width="125" height="125" src="tupian/a.jpg" alt="">
+        </div>
+        <div>黎一杰</div>
+        <div>python后端工程师</div>
+        <div>男，深圳</div>
+        <div>人生苦短，我用python</div>
+        <div class="btns">
+            <!-- 添加按钮 -->
+            <input type="button" value="访问主页">
+            <input type="button" value="发消息">
+            <input type="button" value="删除好友">
+        </div>
+    </div>
+</body>
+</html>

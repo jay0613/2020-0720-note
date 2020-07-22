@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #tip{
+            width: 300px; 
+            height: 200px;
+            margin: 0 auto;
+            border: solid 1px red;
+            /* 相对定位 */
+            position:relative;
+        }
+        #imgb{
+            margin: 0;
+            padding: 0;
+            /* 解决高度为0，从而可以包裹浮动的元素 */
+            overflow:hidden; 
+        }
+        #fangxiang{
+            color: #fff;
+        }
+        #left{
+            /* 绝对定位 */
+            position:absolute;
+            width: 10px;
+            height: 20px;
+            background-color: rgba(167, 161, 161, 0.5);
+            padding: 0 3px 2px 0;
+            top: 95px;
+            /* pointer 鼠标移上去光标变成一只手 */
+            cursor: pointer;
+        }
+        #right{
+            /* 绝对定位 */
+            position:absolute;
+            width: 10px;
+            height: 20px;
+            background-color: rgba(167, 161, 161, 0.5);
+            padding: 0 0 2px 3px;
+            top: 95px;
+            left: 287px;
+            /* pointer 鼠标移上去光标变成一只手 */
+            cursor: pointer;          
+        }
+    </style>
+</head>
+<body>
+    <div id="tip">
+        <div id="imgb">
+            <a href="https://www.baidu.com"><img id="img" style="width: 300px; height: 200px;" src="imgs/r.jpg" alt=""></a>
+        </div>
+        <div id="left" > < </div>
+        <div id="right" > > </div>
+    </div>
+    <script>
+        var imgShow=document.getElementById("img")
+        var left=document.getElementById("left")
+        var right=document.getElementById("right")
+        Number=3
+
+        // 以后图片很多的情况下，可以把图片先保存在数组里面，利用数组下标累加或者累减来找图片
+        // elem.setAttribute("attrname","value");//为元素添加属性,参数为属性名和属性值
+        // imgShow.setAttribute("src","imgs/e.jpg")
+
+
+        left.onclick=function(){
+            if(Number==1){imgShow.src="imgs/e.jpg",Number=4}
+            else if(Number==2){imgShow.src="imgs/j.jpg",Number-=1}
+            else if(Number==3){imgShow.src="imgs/o.jpg",Number-=1}
+            else if(Number==4){imgShow.src="imgs/r.jpg",Number-=1}
+        }       
+        right.onclick=function(){
+            if(Number==1){imgShow.src="imgs/o.jpg",Number+=1}
+            else if(Number==2){imgShow.src="imgs/r.jpg",Number+=1}
+            else if(Number==3){imgShow.src="imgs/e.jpg",Number+=1}
+            else if(Number==4){imgShow.src="imgs/j.jpg",Number=1}
+        }
+    </script>
+</body>
+</html>

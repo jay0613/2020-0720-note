@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #nav{
+            width: 200px;
+            border: solid 1px #ccc;
+            margin: 0 auto;
+        }
+        #nav>.title{
+            border-bottom: solid 1px #ccc;
+            padding: 5px 8px;
+            background-color: #eee;
+            /* 将移到上面的鼠标外观变成手的形状 */
+            cursor: pointer; 
+        }
+        #nav>.con{
+            padding: 8px;
+        }
+    </style>
+</head>
+<!-- 实现功能，单击一下标题，下面的内容隐藏，再单击一下就显示 -->
+<body>
+    <div id="nav">
+        <!-- onclick单击事件 -->
+        <div class="title" onclick="aa()">程序员的法则</div>
+        <div class="con">
+            每天都可以写代码，从事开发工作。
+            每天都可以写代码，从事开发工作。
+            每天都可以写代码，从事开发工作。
+            每天都可以写代码，从事开发工作。
+        </div>
+    </div>
+    <script>
+        // document 获取对象  获取到标题和内容元素对象;getElementsByClassName根据类名,获取到的是一个集合
+        // var a=document.getElementsByClassName("title")[0];
+        var b=document.getElementsByClassName("con")[0];
+        console.log(b.style.display=="");   //如果b.style.display==""则返回true； display默认值为空  此行用作方便理解
+        // 编写代码块aa的内容
+        function aa(){
+            if(b.style.display==""){
+                b.style.display="none";
+            }else{
+                b.style.display=""};
+        }    
+    </script>
+</body>
+</html>

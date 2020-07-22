@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 编写样式代码 -->
+    <style>
+        #tip{
+            border: solid 1px #ccc;
+            width: 200px;
+            margin: 0 auto;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .red{
+            background-color: red;
+            color: #fff;
+        }
+    </style>
+    <!-- 导入jq框架 -->
+    <script src="js/jquery.min.js"></script>
+</head>
+<body>
+    <div id="tip">
+        jQuery框架是如此强大！
+    </div>
+    <script>
+    // 1.获取指定id的jq对象
+    // 2.向对象添加样式
+    // $("#tip").addClass("red").css("color","#fff");
+
+    // jq绑定单击事件
+    // toggleClass("className")如果当前元素存在指定类名,则移除;不存在则添加
+    $("#tip").on("click",function(){
+        $("#tip").toggleClass("red")
+    })
+    
+   
+    </script>
+</body>
+</html>

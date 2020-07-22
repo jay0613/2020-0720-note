@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- display: inline-block;含义：把 label从内联元素转成块元素从而可以控制宽度和高度 -->
+    <!-- padding: 10px;上下撑大10px -->
+    <!-- outline: none;取消外边框线 -->
+    <!-- border-radius: 5px;让注册框四个角变圆润 -->
+    <!-- margin外边距 -->
+    <style>
+        #reg{
+            width: 345px;
+        }
+        label{
+            display: inline-block;
+            width: 88px;
+            border: solid 0px red;
+            text-align: right;
+        }
+        .btn{
+            width: 180px;
+            background-color: green;
+            color: #fff;
+            padding: 13px;
+            outline: none;
+            border: 0px;
+            border-radius: 5px;
+        }
+        div{
+            margin: 20px 0px;
+
+        }
+        .pad{
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div id="reg">
+        <form>
+            <div>
+                <label for="email">*邮箱地址：</label>
+                <input type="text" class="pad" id="email" name="name">
+            </div>
+            <div>
+                <label for="setpass">*设置密码：</label>
+                <input type="password" class="pad" id="setpass" name="setpass">
+            </div>
+            <div>
+                <label for="inst">*兴趣标签：</label>
+                <span style="display: inline-block;">
+                    <input type="checkbox">新闻
+                    <input type="checkbox">文化
+                    <input type="checkbox">娱乐
+                    <input type="checkbox">娱乐
+                </span>
+            </div>
+            <div>
+                <label for="code">*验证码：</label>
+                <input type="text" style="width: 80px;" class="pad">
+            </div>
+            <div>
+                <label for=""></label>
+                <input class="btn" type="submit" value="立即注册">
+            </div>
+            <div>
+                <label for=""></label>
+                <a href="#">新浪网络使用协议</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -11,11 +11,14 @@ ADDR = ("127.0.0.1",8888)
 
 # 查单词
 def query_word(sockfd,name):
-    word = input("请输入单词：")
-    msg = "Q %s"%word
-    sockfd.send(msg.encode())
-    result = sockfd.recv(1024)
-    print(result.decode())
+    while True:
+        word = input("请输入单词：")
+        if word == "##":
+            return
+        msg = "Q %s %s"%(word,name)
+        sockfd.send(msg.encode())
+        result = sockfd.recv(1024)
+        print(result.decode())
 # 二级界面
 def second(sockfd,name):
     while True:
@@ -64,7 +67,7 @@ def do_login(sockfd):
     reslut = sockfd.recv(128).decode()
     if reslut == 'OK':
         print("登录成功")
-        second(socket,name) # 进入二级界面
+        second(sockfd,name) # 进入二级界面
     else:
         print("登录失败")
 

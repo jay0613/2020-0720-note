@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!--#号表示当前页面地址，此处一般写服务端地址-->
+    <form action="#">
+        <!--lable和input通过name或者pass关联起来，关联起来的好处：用户输入的时候随便点哪里都可以弹到输入框输入，用户用起来更方便-->
+        <div>
+            <label for="name">姓名：</label>
+            <!--id="name"用于页面将来调用，name="name"用于数据的提交，placeholder显示在输入框内的提示-->
+            <input type="text" id="name" placeholder="请输入用户名" name="name">
+        </div>
+        <!--type="password"可以让用户输入密码的时候显示黑圆圈不被旁边人看到-->
+        <div>
+            <label for="pass">密码：</label>
+            <!--readonly加了这个属性就只能看不能选中输入了;password用户输入密码时候显示黑圆圈不让旁人看到-->
+            <input type="password" id="pass" readonly placeholder="请输入密码" name="pass">
+        </div>
+        <div>
+            <label for="xl">学历：</label>
+            <!--select下拉列表(一个三角形，点一下就向下出来4个选项)-->
+            <select name="xl" id="xl">
+                <option value="1">大专</option>
+                <option value="2">本科</option>
+                <option value="3">硕士</option>
+                <option value="4">博士</option>
+            </select>
+        </div>
+        <div>
+            <label for="sex">性别：</label>
+            <!--radio单选按钮元素（出来两个小圆圈，点击一下就选中）-->
+            <input type="radio" name="sex" value="1" checked />男 <!--name也绑定了上面的for的"sex"，男和女只能选一个,checked默认选择男-->
+            <input type="radio" name="sex" value="2" />女 <!--name也绑定了上面的for的"sex"，男和女只能选一个-->
+        </div>
+        <div>
+            <label for="like">爱好：</label>
+            <!--checkbox:多选 （出来4个小正方形框，点击一下就选中，建议可多选）-->
+            <input type="checkbox" name="like" />篮球
+            <input type="checkbox" name="like2" />游泳<!--和上面的性别不同这个是可以多选，所以name绑定了like2,下面几个也一样-->
+            <input type="checkbox" name="like3" />足球
+            <input type="checkbox" name="like4" />排球
+        </div>
+        <div>
+            <label for="demo">简介：</label>
+            <!--textarea的框内可以设置行列，会自动换行cols：列 rows:行-->
+            <textarea name="demo" id="demo" cols="30" rows="10"></textarea>
+        </div>
+        <div>
+            <!--submit向默认的服务端地址提交数据，提交到地址栏后面拼接上去-->
+            <input type="submit" value="注册" />
+            <!--disabled使该按钮不可用-->
+            <input type="reset" disabled value="重置" />
+        </div>
+
+    </form>
+</body>
+</html>

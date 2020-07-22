@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+         .red{
+             color:red;
+         }
+         .bgblue{
+             background-color:blue;
+         }
+    </style>
+</head>
+<body>
+    <a id="a1" href="https://www.baidu.com">百度</a>
+    <button id="btn">进入百度</button>
+    <div id="tip">今天会下雨</div>
+    <script>
+    document.getElementById("btn").onclick=function(){
+        //取出链接中的href值
+        var url=document.getElementById("a1").getAttribute("href");
+        //跳转
+        window.location.href=url;
+    }    
+    document.getElementById("tip").className="red bgblue"    
+    </script>
+</body>
+</html>
