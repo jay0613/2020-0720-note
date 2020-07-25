@@ -19,14 +19,16 @@ dict01 = {"a":5,"b":8,"c":9}
 # number = eval("3+3")  # 执行一个字符串表达式，并返回表达式的执行结果值
 # bool = isinstance(2,int)  # 判断一个对象是否是一个已知的类型   # print(isinstance(s01, Person)) # True   # 学生对象  是一种  人类型
 
-print(number)
+
 
 # number = abs(-15)  # 返回该参数的绝对值
 # tup = divmod(7,2)  # 把两个参数的商以及余数放到一个元组中返回  # (7//2, 7%2)  # (3, 1)
 # bool = all(list01) # 判断给定的可迭代参数 iterable 中的所有元素是否都为 TRUE，如果是返回 True，否则返回 False。#元素除了是 0、空、None、False 外都算 True。
 # bool = any(list01)  # 参数list01里面的元素全部为 False，则返回 False，如果有一个为 True，则返回 True。   # 元素除了是 0、空、FALSE 外都算 True。
 # number = pow(100,2)  # 返回100的2次方  # 10000
+number = sum(list01)  # 对系列进行求和计算
 
 
+print(number)
 # dict() # 函数用于创建一个字典。
 # help() # 函数用于查看函数或模块用途的详细说明。

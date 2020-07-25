@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>表单提交</title>
+</head>
+<body>
+    <!-- 15:59~16:15 -->
+    <!-- form表单默认使用get方式提交数据 -->
+    <!-- get会将数据通过查询字符串的方式拼接在地址栏上 -->
+    <!-- 查询字符串 ?key=value&key=value&... -->
+    <!-- file:///home/tarena/shibw/evening/2005/20200723/form.html?username=qtx&password=q123123 -->
+
+
+    <!-- post方式提交的数据没有长度限制也没有格式要求(字符串) -->
+    
+    <!-- get提交数据会收到地址栏的限制,对数据保密性要求不高的\数据量比较少的情况可以使用get提交数据 -->
+    <!-- https://www.baidu.com/s 百度搜索功能的地址 -->
+    <!-- ?wd=python  get提交的关键字 -->
+    <a href="https://www.baidu.com/s?wd=python">搜索python</a>
+    <!-- 获取服务器端的内容时通常使用get -->
+    <!-- 如果数据量比较大  有保密要求时 使用POST -->
+
+    <form action="" method="post">
+        <div>
+            姓名: <input type="text" name="username">
+        </div>
+        <div>
+            密码: <input type="password" name="password">
+        </div>
+        <input type="button" value="普通按钮">
+        <input type="submit" value="登录">
+        <input type="reset">
+    </form>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>后代/子代选择器</title>
+    <style>
+        ul>li{
+            color: red;
+            /* transition 过渡 当指定样式的值发生改变时，可以让值的改变在规定时间内完成而不是马上完成 */
+            transition: all 0.5s;
+        }
+        ul>li:hover{
+            color: aqua;
+        }
+        body>ul>li{
+            text-align: center;
+        }
+        ul li{
+            font-size: 30px;
+        }
+        
+        /* body li{
+            font-size: 25px;
+        } */
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="http://www.4399.com">锄禾日当午</a></li>
+        <li>汗滴禾下土</li>
+        <li>谁知盘中餐</li>
+        <li>粒粒皆辛苦
+            <!-- <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul> -->
+        </li>
+    </ul>
+</body>
+</html>

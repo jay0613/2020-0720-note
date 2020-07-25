@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>浮动</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            /* float: left; */
+        }
+        /* 14:56~15:10 */
+        .d1{
+            background-color: red;
+            float: right;
+        }
+        .d2{
+            /* width: 300px; */
+            background-color: green;
+            float: right;
+        }
+        .d3{
+            background-color: blue;
+            float: left;
+        }
+        span{
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+            float: left;
+        }
+        ul,li{
+            list-style: none;
+        }
+        /* 休息15:55~16:10 */
+        li{
+            /* height: 200px; */
+            border: 5px solid #000;
+            /* overflow: hidden; */
+        }
+        p{
+            margin: 0;
+        }
+        .clear{
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <li>
+        <div class="d1"></div>
+        <div class="d2"></div>
+        <div class="d3"></div>
+        <span></span>
+        <p class="clear"></p>
+    </li>
+</body>
+</html>

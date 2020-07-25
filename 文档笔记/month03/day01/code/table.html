@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>表格标签</title>
+</head>
+<body>
+    <!-- 休息16:00~16:15 -->
+    <!-- border="1" 添加1像素的边框 -->
+    <!-- cellspacing="0" 设置单元格之间的距离为0 -->
+    <table border="1" cellspacing="0">
+        <!-- tr*4>td*3 + tab -->
+        <tr>
+            <!-- colspan跨列 横向合并单元格
+                 合并后注意本行后面的删除多余的单元格 -->
+            <td colspan="3">11</td>
+            <!-- <td>12</td>
+            <td>13</td> -->
+        </tr>
+        <tr>
+            <!-- rowspan 纵向合并单元格 
+            合并后注意删除其它行的对应位置的单元格-->
+            <td rowspan="3">21</td>
+            <td>22</td>
+            <td>23</td>
+        </tr>
+        <tr>
+            <!-- <td>31</td> -->
+            <td>32</td>
+            <td>33</td>
+        </tr>
+        <tr>
+            <!-- <td>41</td> -->
+            <td>42</td>
+            <td>43</td>
+        </tr>
+    </table>
+</body>
+</html>

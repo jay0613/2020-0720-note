@@ -1,0 +1,8 @@
+/* 外部样式表文件 */
+h1{
+    /* 样式声明 */
+    background-color: pink;
+    text-align:center;
+    /* 练习设置文本颜色、设置字体大小 */
+    color:orange;
+}

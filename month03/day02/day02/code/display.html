@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .red{
+            width: 50%;
+            height: 400px;
+            background-color: red;
+           /* 转成块元素 */
+            display: block;  
+        }
+        #inner{
+             /* none隐藏元素 */ 
+            display:none;
+        }
+        
+        div#inner{
+            width: 100%;
+            height: 50%;
+            background-color: blue;
+            /* 转成行内块元素 */
+            display:inline-block
+        }
+        div{
+            /* 转成行内元素 */
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <div class="red">
+        <div id="inner"></div>
+    </div>
+</body>
+</html>

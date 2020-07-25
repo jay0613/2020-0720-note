@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>选择器</title>
+    <style>
+        /* div{
+            font-size: 30px
+        } */
+        #title{
+            font-size: 30px
+        }
+        /* #content{
+            color: red;
+            font-size: 20px
+        }
+        p{
+            color:red;
+            font-size: 20px
+        } */
+        .red{
+            color: red;
+            font-size: 20px
+        }
+        .center{
+            text-align: center;
+        }
+        /* 找所有div中class="red"的div */
+        div.red{
+            text-align: center;
+        }
+        h1,p,ul,li{
+            /* 清除元素默认的边距 */
+            padding: 0;
+            margin: 0;
+        }
+
+        /* 预习后代 子代选择器 */
+    </style>
+</head>
+<body>
+    <h1>hello world</h1>
+    <div id="title">演示选择器的使用</div>
+    <div class="red">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, placeat? Eaque magnam magni dignissimos quaerat deserunt culpa, a eius explicabo libero quibusdam reprehenderit quas illo omnis laboriosam! Suscipit, ab assumenda.
+    </div>
+    <div class="red">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, placeat? Eaque magnam magni dignissimos quaerat deserunt culpa, a eius explicabo libero quibusdam reprehenderit quas illo omnis laboriosam! Suscipit, ab assumenda.
+    </div>
+    <div class="red">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, placeat? Eaque magnam magni dignissimos quaerat deserunt culpa, a eius explicabo libero quibusdam reprehenderit quas illo omnis laboriosam! Suscipit, ab assumenda.
+    </div>
+    <p class="red">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur eaque tenetur placeat voluptatem tempora error cum sint a neque. Quidem, error ipsam! Illum, ipsam eum? Quibusdam fuga dolorum a dolores!
+    </p>
+</body>
+</html>
