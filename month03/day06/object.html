@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>对象</title>
+</head>
+<body>
+    <script>
+        var obj = {uname:"QTX",age:18};
+        console.log(obj.uname,obj.age);
+        console.log(obj['uname']);
+
+        for(var i in obj){
+            console.log(i,obj[i]);
+        }
+        // [{"name":"maria","age":18},{},{}...]
+    
+        var json = {"uname":"QTX","age":18};
+        console.log(obj)
+        console.log(json)
+    </script>
+</body>
+</html>

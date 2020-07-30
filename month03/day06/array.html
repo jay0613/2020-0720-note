@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>array数组</title>
+</head>
+<body>
+    <script>
+        // Array() 构造函数 保存一些和数组有关的属性和方法
+        // new 创建一个空对象 让空对象继承数组的属性和方法 返回这个对象
+        // var arr = new Array(5,4,3,2,1);
+        // console.log(arr);
+        // var arr = [1,2,3,4,5];
+        // //         0 1 2 3 4
+        // console.log(arr[arr.length-1]);//数组最后一位
+        // console.log(arr[5]);//undefined
+        // arr[2] = 3.14;
+        // console.log(arr);
+        // arr[10] = 11;
+        // console.log(arr);//JS数组可以是不连续的
+        // console.log(arr[-1]);//没有反向索引
+        // 11:00~11:15
+        // arr[0:3]不能切片
+
+
+        // 遍历数组
+        // 遍历数组的全部内容 如果对应索引的值为空 显示undefined 
+        // for(var i=0;i<arr.length;i++){
+        //     console.log(arr[i]);
+        // }
+        // // 遍历数组中全部的值 获取到对应的索引
+        // for(var i in arr){
+        //     console.log(i,arr[i])//i 索引值
+        // }
+
+
+        // 数组方法
+        // var arr = [0,1]
+        // // 末尾添加
+        // arr.push(2,3,4)
+        // console.log(arr)
+        // // 末尾移除
+        // var last = arr.pop()
+        // console.log(arr)
+
+        // 开始位置添加
+        // arr.unshift(-1)
+        // console.log(arr)
+        // // 开始位置移除
+        // var first = arr.shift()
+        // console.log(arr,first)
+
+
+        // var arr = [1,2,3,4,5];
+        //         0 1 2
+        // 从arr索引值为2的位置开始 截取两个值 放在新数组中返回
+        // 还可以按照位置替换原本的内容
+        // var res = arr.splice(2,2,'?','?');
+        // console.log(res);
+        // console.log(arr);
+
+        // var arr = [1,2,5];//[1,2,3,4,5]
+        // arr.splice(2,0,3,4);
+        // // 从arr索引值为2的位置开始 截取0个值  添加3,4
+        // console.log(arr);
+
+
+        // 数组转字符串
+        // var arr = [1,2,3]
+        // console.log(arr.toString());//'1,2,3'
+        // console.log(arr.join('-'));
+        // var arr = [2019,1,1];
+        // // console.log(arr[0]+'/'+arr[1]+'/'+arr[2])
+        // console.log(arr.join('/'))
+
+
+        // 数组排序
+        var arr = [10,2,5,77,300];
+        // sort接收一个自定义函数做参数
+        // sort每次会取两个数值传入自定义函数 
+        // sort会判断函数的返回值 如果函数返回值大于0 则交换两个数的位置
+        // arr.sort();
+        // console.log(arr)
+        arr.sort(sortASC);
+        console.log(arr);
+         //自定义升序
+        function sortASC(a,b){
+            return a-b;
+        }
+        // 自定义降序
+        function sortDESC(a,b){
+            return b-a;
+        }
+    </script>
+</body>
+</html>

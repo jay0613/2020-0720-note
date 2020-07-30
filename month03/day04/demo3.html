@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>比较运算</title>
+</head>
+<body>
+    <script>
+        // console.log('abc'>'b');
+        // console.log('a'.charCodeAt())
+        // console.log('b'.charCodeAt())
+        // 15:48~16:05
+        // 练习比较运算+休息
+        // console.log(true>null);
+        // console.log('18'>1);
+        // console.log('18'>'abc');
+        // console.log('1'.charCodeAt());
+        // console.log('18' == 18);//18 == 18
+        // console.log(0 == false);
+        // // null在做等值比较时 不发生转换
+        // console.log(null == 0);
+        // console.log(null == undefined);
+
+        // console.log('18' !== 18);
+        // console.log(null === undefined);
+
+        // 逻辑运算
+        // var year = prompt('请输入一个年份');
+        // // year % 4 == 0 and year % 100 != 0 or year % 400 == 0
+        // console.log(year % 4 == 0 && year % 100 != 0 || year % 400 == 0)
+
+        // var age = prompt('请输入年龄');
+        // // console.log(age>=18 && age<=30);
+        // // && 一假俱假 如果条件1的结果是false 整个表达式的结果就确定了  后面的条件2就会被忽略   短路逻辑
+        // // || 一真俱真
+        // console.log(age>18 && console.log(x));
+
+        // console.log(!100);
+
+
+        // 三目运算
+        // var a = 10;
+        // var b = 20;
+        // a>b?console.log(a):console.log(b);
+
+        // 休息+练习16:51~17:10
+        // 请用户输入年份 判断  在终端输出是不是闰年
+        var year = prompt('请输入年份');
+        var result = year % 4 == 0 && year % 100 != 0 || year % 400 == 0;
+        result?console.log('是闰年'):console.log('不是闰年');
+        // 请用户输入一个数字  如果是一位数字 就在终端补0显示
+        //   如 输入1   输出01
+        var num = prompt('请输入数字');
+        // console.log('0'+1)
+        num<10?console.log(0+num):console.log(num);
+    </script>
+</body>
+</html>

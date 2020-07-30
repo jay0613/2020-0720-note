@@ -2,25 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a976345a-394f-41e4-b012-34d7573639e2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/葵花宝典/2.re模块(正则).py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/葵花宝典/2.sys模块.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/葵花宝典/2.time模块.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/葵花宝典/math模块.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/葵花宝典/dict各种方法.py" beforeDir="false" afterPath="$PROJECT_DIR$/葵花宝典/1.dict各种方法.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/葵花宝典/list各种方法.py" beforeDir="false" afterPath="$PROJECT_DIR$/葵花宝典/1.list各种方法.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/葵花宝典/os模块.py" beforeDir="false" afterPath="$PROJECT_DIR$/葵花宝典/2.os和shutil模块.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/葵花宝典/random模块.py" beforeDir="false" afterPath="$PROJECT_DIR$/葵花宝典/2.random模块.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/葵花宝典/re模块.py" beforeDir="false" afterPath="$PROJECT_DIR$/day99/exercise03.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/葵花宝典/set各种方法.py" beforeDir="false" afterPath="$PROJECT_DIR$/葵花宝典/1.set各种方法.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/葵花宝典/str各种方法.py" beforeDir="false" afterPath="$PROJECT_DIR$/葵花宝典/1.str各种方法.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/葵花宝典/sys模块.py" beforeDir="false" afterPath="$PROJECT_DIR$/葵花宝典/2.json模块.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/葵花宝典/time模块.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/葵花宝典/tuple各种方法.py" beforeDir="false" afterPath="$PROJECT_DIR$/葵花宝典/1.tuple各种方法.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/葵花宝典/内置高阶函数.py" beforeDir="false" afterPath="$PROJECT_DIR$/葵花宝典/内置高阶函数.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../month03/day01/code/homwork/homework0.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../month03/day01/code/homwork/homework1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../month03/day01/code/homwork/homework2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day99/exercise03.py" beforeDir="false" afterPath="$PROJECT_DIR$/day99/exercise03.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../month03/day03/exercise/练习0.html" beforeDir="false" afterPath="$PROJECT_DIR$/../month03/day03/exercise/练习0.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

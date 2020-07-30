@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 休息10:00~10:15 */
+        ul,li{
+            padding: 0;
+            margin: 0;
+            /* 父元素和子元素一同浮动时 父元素的边框可以直接包住子元素 */
+            float: left;
+        }
+        ul{
+            list-style: none;
+        }
+        .first{
+            color: #666;
+            margin: 5px 0;
+        }
+        ul{
+            border: 1px solid red;
+        }
+        .items{
+            margin: 5px 15px;
+            padding: 0 5px;
+            transition: all 0.3s;
+        }
+        .items:hover{
+            background-color: #f00;
+            color: #fff;
+            cursor: pointer;
+        }
+        .active{
+            background-color: #f00;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li class="first">难度：</li>
+        <li class="items">全部</li>
+        <li class="items">初级</li>
+        <li class="items active">中级</li>
+        <li class="items">高级</li>
+    </ul>
+    <script>
+        // 休息9:55~10:10
+        // 通过items找到全部的带有items类名的标签
+        var items = document.getElementsByClassName('items')
+        for(var i = 0;i<items.length;i++){
+            items[i].onclick = function(){
+                // 清除所有的class active
+                for(var i = 0;i<items.length;i++){
+                    // items[i].removeAttribute('class')
+                    items[i].setAttribute('class','items')
+                }
+                // 为当前按钮添加class active
+                this.setAttribute('class','items active')
+            }
+        }
+
+
+
+
+
+        // for(let i = 0;i<items.length;i++){
+        //     // 使用let声明变量
+        //     // let声明的循环变量 只能在循环中使用 表示当前的变量
+        //     items[i].onclick = function(){
+        //         // this 表示调用函数的当前HTML(dom)对象
+        //         console.log(this.innerHTML)
+        //     }
+        // }
+        
+
+        // for(let i = 0;i<items.length;i++){
+        //     // 使用let声明变量
+        //     // let声明的循环变量 只能在循环中使用 表示当前的变量
+        //     items[i].onclick = function(){
+        //         console.log(items[i].innerHTML)
+        //     }
+        // }
+        
+        // for(var i = 0;i<items.length;i++){
+        //     items[i].onclick = (function(i_inner){
+        //         // 外部函数中想要找到当前的i  i的值永远是4
+        //         // 思路一  通过闭包的方式 保留当前的i
+        //         // console.log(i_inner)
+        //         return function(){
+        //             console.log(items[i_inner].innerHTML);
+        //         }
+        //     })(i)
+        // }
+        
+        
+        
+        // console.log(items);
+        // 遍历 为每一个标签绑定单击事件
+        // for(var i = 0;i<items.length;i++){
+        //     items[i].onclick = function(){
+        //         // alert('hello world');
+        //         console.log(i)
+        //         console.log(items[i]);//undefined
+        //         // alert(items[i].innerHTML)
+        //     }
+        // }
+        // console.log(i)
+
+        // 为中级按钮添加鼠标单击事件  弹框提示hello world
+        // var active = document.getElementsByClassName('active')[0];
+        // // console.log(active);
+        // active.onclick = function(){
+        //     alert('hello world')
+        // }
+    </script>
+
+</body>
+</html>

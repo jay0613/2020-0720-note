@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>函数</title>
+</head>
+<body>
+    <button id="btn">
+        click me
+    </button>
+    <script>
+        // 14:52~15:07
+        // 通过document查找页面元素
+        var btn = document.getElementById('btn');
+        // console.log(btn.id);
+        // 通过btn的onclick属性绑定一个匿名函数
+        // function fun(){
+        //     alert('hello world');
+        // }
+        // btn.onclick = fun
+        btn.onclick = function(){
+            alert('hello world');
+        }
+    </script>
+
+    <script>
+        // 作用域
+        // var a = 1;
+        // function fun(){
+        //     a = 10;
+        //     b = 20;
+        // }
+        // fun();
+        // console.log(b);
+        // console.log(a);
+        
+        var a = 1;
+        function fun(){
+            var a = 10;
+            return function(){
+                a++;
+                return a;
+                // console.log(a);
+            }
+        }
+        console.log(fun()());
+        console.log(a);
+    </script>
+
+    <script>
+        // function fun(name){
+        //     document.write('hello ' + name);
+        // }
+        // fun('QTX');
+
+        // function myMax(a,b){
+        //     // if (a>b){
+        //     //     return a
+        //     // }else{
+        //     //     return b
+        //     // }
+        //     return a>b?a:b
+        // }
+        // console.log(myMax(10,20));
+
+        // (function (){
+        //     document.write('hello world');
+        // })()
+
+        // console.log(fun);//function
+        // console.log(fun1);//undefined
+
+        // fun()
+
+        // function fun(name){
+        //     document.write('hello ' + name);
+        // }
+        // fun('QTX');
+
+        // var fun1 = function(name){
+        //     document.write('hello ' + name);
+        // }
+        // fun1('QTX');
+    </script>
+</body>
+</html>

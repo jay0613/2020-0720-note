@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>字符串练习 </title>
+</head>
+
+<body>
+    <input id="email" type="text" placeholder="请输入邮箱地址">
+    <button id="btn">获取用户名和服务商</button>
+    <table>
+        <thead>
+            <tr>
+                <th>用户名</th>
+                <th>服务商</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script>
+        // 文本框
+        var email = document.getElementById('email');
+        var btn = document.getElementById('btn');
+        var tbody = document.getElementsByTagName('tbody')[0];
+        // 16:00~16:15
+        btn.onclick = function(){
+            var str = email.value;//获取用户输入的内容
+            // var index = str.indexOf('@');
+            // var u = str.substring(0,index);//用户名
+            // var f = str.substring(index+1);//服务商
+            var res = str.split('@');//['shibw','tedu.cn']
+            var html = '';
+            html += '<tr>';
+            html += '<td>'+res[0]+'</td>';
+            html += '<td>'+res[1]+'</td>';    
+            html += '</tr>';
+            console.log(html);//将数据拼接到页面元素的字符串中
+            tbody.innerHTML = html;//将字符串放入页面元素
+        }
+
+
+        // shibw@tedu.cn  用户名shibw  服务商tedu.cn
+        // var str = 'shibw@tedu.cn';
+        // // 14:53~15:10
+        // // 提取字符串中的用户名和服务商
+        // var index = str.indexOf('@');
+        // var u = str.substring(0,index);
+        // var f = str.substring(index+1);
+        // console.log('用户名'+u,'服务商'+f)
+
+    </script>
+</body>
+
+</html>

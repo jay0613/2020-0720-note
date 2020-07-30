@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn" class="b1">hello</button>
+
+    <script>
+        // 查找页面元素
+        var b1 = document.getElementsByClassName('b1');
+        for(var i=0;i<b1.length;i++){
+            console.log(b1[i])
+        }
+        var button = document.getElementsByTagName('button')
+        // 修改内容
+        // b1[i].innerHTML = 'click'
+        // b1[i].innerText = 'click'
+
+        // input.value = 'xxx'
+        // 修改属性
+        btn.getAttribute('class')
+        btn.setAttribute('class','btn1 red')
+        btn.removeAttribute('class')
+    </script>
+
+    <script>
+        // function fun(){
+        //     var a=10;
+        //     return function(){
+        //         console.log(a)
+        //     }
+        // }
+        // // console.log(fun())
+        // fun()()
+
+
+        // var a = 1;
+        // function fun(){
+        //     // var a = 10;
+        //     function inner(){
+        //         console.log(a)
+        //     }
+        //     inner()
+        // }
+        // fun();
+        // console.log(i);//1
+
+
+
+        // var btn = document.getElementById('btn');
+        // btn.onclick = function(){
+        //     fun('QTX')
+        // }
+
+        // var fun = function(name){
+        //     console.log('hello'+name);
+        // }
+        // fun()
+
+        // 自调
+        // (function(name){
+        //     console.log('hello'+name);
+        // })('QTX')
+
+
+        // function fun(name){
+        //     console.log('hello'+name);
+        // }
+        // fun('QTX')
+    </script>
+    <script>
+        a = 10
+        if(a<18){
+            // 满足条件执行的代码
+        }else if(a>60){
+            // 满足条件2执行的代码
+        }else{
+            // 不满足条件执行的代码
+        }
+
+        switch(a){
+            case 10:
+                // a === 10时 执行的代码
+                break
+            case 18:
+            case 20:
+            case 30:
+                // a === 18时 执行的代码
+                break
+            default:
+                // 所有case值匹配失败时 执行的代码
+        }
+
+
+        var i = 0;
+        while(i<10){
+            console.log(i);
+            i++;
+        }
+
+        var i=100;
+        do{
+            console.log(i)
+            i++;
+        }while(i<10);
+
+        for(var i=0;i<10;i++){
+            console.log(i)
+        }
+    </script>
+</body>
+</html>

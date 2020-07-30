@@ -47,5 +47,37 @@
         <li class="item active">中级</li>
         <li class="item">高级</li>
     </ul>
+    <script>
+        var jibie = document.getElementsByClassName("item")
+    //     for(var i=0;i<jibie.length;i++){
+    //         jibie[i].onclick = function(){
+    //         alert("你好啊")
+    //     }
+    // }
+
+        //     for(let i=0;i<jibie.length;i++){
+        //         jibie[i].onclick = function(){
+        //            console.log(jibie[i].innerHTML) 
+        //         }
+        //     }
+
+        // for(var i = 0;i<jibie.length;i++){
+        //     jibie[i].onclick = (function(i_inner){
+        //         // 外部函数中想要找到当前的i  i的值永远是4
+        //         // 思路一  通过闭包的方式 保留当前的i
+        //         // console.log(i_inner)
+        //         return function(){
+        //             console.log(jibie[i_inner].innerHTML);
+        //         }
+        //     })(i)
+        // }
+        
+        for(var i=0;i<jibie.length;i++){
+            jibie[i].onclick = function(){
+                console.log(this.innerHTML)
+            }
+        }
+
+    </script>
 </body>
 </html>

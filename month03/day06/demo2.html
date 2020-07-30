@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        p>span{
+            color: #f00;
+        }
+    </style>
+</head>
+<body>
+    <!-- 16:57~17:15 -->
+    <input id="key" type="text">
+    <button id="btn">查找</button>
+    <p id="content">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis veniam, quod iusto modi odio, error cum similique excepturi porro assumenda magni! Voluptas at aperiam corporis, aspernatur odio debitis consequuntur quae.
+    </p>
+    <script>
+        // 1.用户在文本框中 输入内容 点击按钮时 alert显示
+        // 有可匹配或没有可匹配的内容 reg.test()
+        var key = document.getElementById('key');
+        var btn = document.getElementById('btn');
+        var p = document.getElementById('content');
+        btn.onclick = function(){
+            // alert(key.value);
+            // 将用户的输入变成正则表达式
+            var reg = new RegExp(key.value,'ig');
+            var str = p.innerText;
+            // 检测页面文本中是否有符合正则表达式匹配模式的内容
+            reg.test(str)?alert('有可匹配的内容'):alert('没有可匹配的内容')
+
+            // 2.将找到的所有内容变成红色显示
+            // 将用户输入的内容找到以后替换成带有span标签的字符串
+            // 'sit' ==> '<span>sit</span>'
+            // str.replace()
+            var res = str.replace(reg,'<span>'+key.value+'</span>');
+            // 将替换好的字符串放入p中显示
+            p.innerHTML = res;
+        }
+
+    </script>
+</body>
+</html>

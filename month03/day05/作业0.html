@@ -6,14 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        ul,li{
+           /* 休息10:00~10:15 */
+           ul,li{
             padding: 0;
             margin: 0;
             /* 父元素和子元素一同浮动时 父元素的边框可以直接包住子元素 */
             float: left;
         }
         ul{
-            /* 去掉ul里面的li前面的圆点 */
             list-style: none;
         }
         .first{
@@ -23,12 +23,12 @@
         ul{
             border: 1px solid red;
         }
-        .item{
+        .items{
             margin: 5px 15px;
             padding: 0 5px;
             transition: all 0.3s;
         }
-        .item:hover{
+        .items:hover{
             background-color: #f00;
             color: #fff;
             cursor: pointer;
@@ -42,10 +42,28 @@
 <body>
     <ul>
         <li class="first">难度：</li>
-        <li class="item">全部</li>
-        <li class="item">初级</li>
-        <li class="item active">中级</li>
-        <li class="item">高级</li>
+        <li class="items">全部</li>
+        <li class="items">初级</li>
+        <li class="items active">中级</li>
+        <li class="items">高级</li>
     </ul>
+    <script>
+        // 作业
+        // 实现点击切换样式的功能
+        // 点击当前的按钮时  
+        // 为当前 按钮添加class  active
+        // 清除其他按钮的class active
+        var items = document.getElementsByClassName("items")
+        for(var i=0;i<items.length;i++){
+            items[i].onclick = function(){
+                // 清除所有的class active
+                for(var i=0;i<items.length;i++){
+                    items[i].setAttribute("class","items")
+                }
+               this.setAttribute("class","items active")
+            }
+        }
+
+    </script>
 </body>
 </html>

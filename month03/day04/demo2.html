@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>类型转换</title>
+</head>
+<body>
+    <script>
+        // 隐式转换
+        console.log('10'+1);
+        // '10' +  '1'  =  '101'
+
+        console.log('10'-1);
+        // 10 - 1 = 9
+
+
+        // 接收用户输入的一个数值 将数值加10后打印
+        // var num = prompt('请输入一个数值');
+        // console.log(parseInt(num)+10);
+        
+
+        var age = 18;//假装从服务器获取的数据
+        // 显示 QTX的年龄为xx
+        console.log('QTX的年龄为'+age);
+
+        console.log(age+'');//'18'
+        console.log('10'-true);//10 - 1
+
+        // var a = 10;
+        // // a += 1
+        // // a = a + 1
+        // console.log(a+=1)
+
+        // var a = 10;
+        // // a/=2  a = a/2
+        // console.log(a/=2);//a = 5
+        // console.log(a%=3);//a = 2
+
+        // 15:00~15:15
+        // var a = 10;
+        // // a=a+1;
+        // // a+=1
+        // // a++;
+        // ++a;
+        // console.log(a);
+        // // a-=1
+        // // a--;
+        // --a;
+        // console.log(a);
+        var a = 1;
+        //a=1   a++  a++的值1 a的值2  先返回a的值再让a递增
+        //a=2   ++a  ++a的值3 a的值3  先递增再返回a的值
+        //a=3   a++  a++的值3 a的值4
+
+        console.log(a++ + ++a + a++);
+                //   1  +  3  +  3
+
+        console.log(a)//4
+        //a=4   a--  a--的值4  a的值3  先返回a的值再让a递减
+        //a=3   --a  --a的值2  a的值2  先递减再返回a的值
+        //a=2   a--  a--的值2  a的值1
+        console.log(a-- - --a - a--);
+        //            4 -  2  -  2
+
+
+
+
+
+
+
+        //强制转换   任意类型-->string
+        // var a = 10;
+        // var str_a = a.toString();
+        // console.log(str_a,10);
+        // // console.log(10.toString())
+        // console.log(true.toString())
+
+
+        // console.log(Number('123'))
+        // console.log(Number('123.456'))
+        // console.log(Number('123abc'))//NaN
+        // console.log(Number(true))//1
+        // console.log(Number(undefined))//NaN
+        // console.log(Number(null))//0
+
+
+        // console.log(parseInt('123abc'))
+        // console.log(parseInt('123.456'))
+        // console.log(parseInt(123.456))
+        // console.log(parseFloat('123.456'))
+        // console.log(parseFloat('123.456.789'))
+
+    </script>
+</body>
+</html>

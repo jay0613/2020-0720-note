@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>操作页面元素内容</title>
+</head>
+<body>
+    <input id="text" type="text">
+    <button id="btn">click me</button>
+    <h1 id="show">hello</h1>
+    <script>
+        // 查找页面元素
+        // 找文本框
+        var text = document.getElementById('text')
+        // 找按钮
+        var btn = document.getElementById('btn')
+        // 找h1
+        var h1 = document.getElementById('show')
+        // console.log(h1.innerText)//获取文本内容
+        // h1.innerText = 'hello world';//修改文本内容
+        // h1.innerHTML = '<a href="">hello world</a>'
+
+        // 休息17:00~17:15
+        // 当按钮被点击时 执行一个函数
+        btn.onclick = function(){
+            // console.log(text.value);
+            h1.innerText = text.value;
+        }
+        // 找到文本框的内容  将内容放在h1中显示
+    </script>
+</body>
+</html>
