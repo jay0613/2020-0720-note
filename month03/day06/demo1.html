@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            width: 50px;
+            height: 50px;
+            display: inline-block;
+        }
+        .red{
+            background-color: red;
+        }
+        .blue{
+            background-color: blue;
+        }
+        .green{
+            background-color: green;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="red"></div>
+    <div class="blue"></div>
+    <div class="green"></div>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia doloribus perspiciatis repellat omnis debitis, quia voluptatum laudantium aut id ipsa? Alias quas iste repellat exercitationem atque cumque delectus accusamus quos.
+    </p>
+    <select name="" id="colorList">
+        <option value="black">请选择</option>
+        <option value="red">红色</option>
+        <option value="green">绿色</option>
+        <option value="blue">蓝色</option>
+    </select>
+    <script>
+        var c = document.getElementById("colorList");
+        var p = document.getElementsByTagName("p")[0]
+        // c.onclick = function(){
+        //    console.log("点击下拉")
+        // }
+        // 表单元素值发生改变时会触发onchange事件
+        c.onchange = function(){
+            console.log("点击下拉")
+            // 当用户选择一个选项时，显示用户选择的选项
+            console.log(this.value)
+            p.style.color = this.value;
+        }
+    </script>
+
+    <script>
+        var divs = document.getElementsByTagName("div");
+        var p = document.getElementsByTagName("p")[0];
+        for(var i=0;i<divs.length;i++){
+            divs[i].onclick = function(){
+            p.style = "color:"+this.className;
+            }
+        }
+    </script>
+</body>
+</html>

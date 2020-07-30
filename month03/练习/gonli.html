@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        账号 <input type="text"  id="uname">
+        <br>
+        密码 <input type="text"  id="upwd">
+        <br>
+        <div id="d1"></div>
+        <button type="submit">提交</button>
+    </form>
+
+
+    <script>
+        // 创建异步对象
+        var xhr = new XMLHttpRequest();
+        var $uname = uname.value;
+        var $upwd = upwd.value;
+        if(!$uname){
+            alert("用户名不能为空")
+        }
+        if(!$upwd){
+            alert("密码不能为空")
+        }
+        // 创建请求
+        // http://127.0.0.1:8888/gongli/login
+        xhr.open("get",`/gongli/login/${$uname}&${$upwd}`,true)
+        // 发送请求
+        xhr.send()
+        // 接受相应   监听函数onreadystatechange
+        xhr.onreadystatechange = function(){
+            if(xhr.readyState==4&&xhr.status==200){
+                var result = xhr.responseText;
+                if(result==1){
+                    // d1.innerHTML ="登录成功"
+                    location.href = "index.html"
+                }else{d1.innerHTML ="登录失败"}
+            }
+        }
+
+    </script>
+</body>
+</html>
