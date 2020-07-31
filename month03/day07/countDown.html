@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>倒计时</title>
+</head>
+
+<body>
+    <h1 id="timeBox">
+        00:00:00
+    </h1>
+    <script>
+        function addZero(num) {
+            // 接收数字 如果输入的是一位数字补零显示
+            return num < 10 ? '0' + num : num + ''
+        }
+        // 启动周期性定时器 每隔1秒在页面中显示倒计时 
+        // 时间差为0时 停止定时器 提示用户倒计时结束
+        var h1 = document.getElementById('timeBox');
+        var timer = setInterval(function () {
+            var start = new Date();
+            var end = new Date('2020/07/31 18:00:00');
+            var leftTime = parseInt((end - start) / 1000);
+            if(leftTime <= 0){
+                clearInterval(timer);//停止定时器
+                //提示用户 
+                h1.innerHTML = '倒计时结束 请重新开始计时';
+                return//退出函数
+            }
+            var h = addZero(parseInt(leftTime / 3600));
+            var m = addZero(parseInt(leftTime % 3600 / 60));
+            var s = addZero(leftTime % 60);
+            h1.innerHTML = `${h}:${m}:${s}`;
+        },1000)
+
+
+
+
+
+
+        // // 计算当前时间距离今天中午12:00还有多久  显示在页面上
+        // // 时：分：秒
+        // var start = new Date();
+        // var end = new Date('2020/07/31 12:00:00')
+        // // var end = new Date();
+        // // end.setHours('12');
+        // // end.setMinutes('0');
+        // // end.setSeconds('0');
+        // // console.log(start,end,end-start);
+        // // 求时间差(秒)
+        // var leftTime = parseInt((end-start)/1000) 
+        // // console.log(leftTime)
+        // // 换算成时分秒
+        // var h = addZero(parseInt(leftTime/3600));
+        // var m = addZero(parseInt(leftTime % 3600 / 60));
+        // var s = addZero(leftTime % 60);
+        // console.log(`${h}:${m}:${s}`)
+        // // 休息10:58~10:15
+        // // 显示到页面上(补零)
+        // var h1 = document.getElementById('timeBox');
+        // h1.innerHTML = `${h}:${m}:${s}`;
+    </script>
+</body>
+
+</html>

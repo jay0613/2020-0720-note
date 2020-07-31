@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>从数组获取不重复的值</title>
+</head>
+<body>
+    <script>
+        // 从一个列表里面随机获取len个数字
+        function getRandElements(arr,len){
+            var res = [];
+            // 打乱数组的顺序
+            // sort会根据传入的函数的返回值交换两个值的位置
+            // Math.random()和0.5运算获取随机的正数或负数
+            // 如果是正数 sort 会交换两个值的位置
+            arr.sort(function(){
+                return 0.5-Math.random()
+            })
+            
+            for(var i=0;i<len;i++){
+                res.push(arr[i])
+            }
+            return res;
+        }
+        arr1 = getRandElements([1,2,3,4,5,6,7,8],5)
+        document.write(arr1)
+    </script>
+</body>
+</html>

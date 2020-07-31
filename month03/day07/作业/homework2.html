@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>homework2</title>
+    <style>
+        /* 父容器 */
+        #sildeBar{
+            width: 739px;
+            height: 419px;
+            position: relative;
+        }
+        /* 所有轮播的图片 */
+        #sildeBar>img{
+            position: absolute;
+            top: 0px;
+            /* 设置堆叠次序  谁高显示谁 */
+            z-index: 1;  
+            /* 透明度0 */
+            opacity: 0;
+            /* 设置缓慢改变 */
+            transition: all  2s
+        }
+
+        /* 显示的图片 */
+        #sildeBar>img.active{
+            opacity: 1;
+            z-index: 2;
+        }
+        /* 左右按钮 */
+        #ll,#rr{
+            position: absolute;
+            z-index: 6;
+            top: 50%;
+            margin-top:-20px;
+        }
+        #rr{
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="sildeBar">
+        <img class="item active" src="imgs/gm1-6.jpg" alt="">
+        <img class="item" src="imgs/gm2-6.jpg" alt="">
+        <img class="item" src="imgs/gm3-6.jpg" alt="">
+        <img class="item" src="imgs/gm4-6.jpg" alt="">
+        <img class="item" src="imgs/gm5-6.jpg" alt="">
+        <div>
+            <img id="ll" src="imgs/l1-6.png" alt="">
+            <img id="rr" src="imgs/r1-6.png" alt="">
+        </div>
+    </div>
+
+    <script>
+        var ll = document.getElementById("ll")
+        var rr = document.getElementById("rr")
+        var i = 0;
+        // 找到当前的i所表示的图片对象  移除class active
+        // 找到下一个i所表示的图片对象  添加class active
+        var imgs = document.getElementsByClassName("item");
+
+        // 单机左图片换图
+        ll.onclick = function(){
+            imgs[i].className = "item";
+            // 求下一个图片的i
+            i--;  // 向左移动索引值
+            if(i==-1){
+                i=imgs.length-1;
+            }
+            imgs[i].className = "item active";
+        }
+
+         // 单机右图片换图
+        rr.onclick = function(){
+            imgs[i].className = "item";
+            // 求下一个图片的i
+            i++  // 向右移动索引值
+            if(i==imgs.length){
+                i=0;
+            }
+            imgs[i].className = "item active";
+        }
+
+        // 设置定时器轮播 1500毫秒自动切换一次图片
+        var timerID = setInterval(rr.onclick,1500)
+
+        var sildeBar = document.getElementById("sildeBar")
+        // onmouseover 鼠标移入
+        sildeBar.onmouseover = function(){
+            clearInterval(timerID)
+        }
+        // onmouseout 鼠标移出
+        sildeBar.onmouseout = function(){
+            timerID = setInterval(rr.onclick,1500)
+        }
+        
+    </script>
+</body>
+</html>

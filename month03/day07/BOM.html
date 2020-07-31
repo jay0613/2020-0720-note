@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BOM</title>
+</head>
+
+<body>
+    <button id="btn1">启动定时器</button>
+    <button id="btn2">停止定时器</button>
+    <script>
+        var btn1 = document.getElementById('btn1')
+        var btn2 = document.getElementById('btn2')
+        // 11:55
+        var timerId = null;
+        btn1.onclick = function(){
+            var timer = setTimeout(function(){
+                alert('hello world')
+            },1000)
+        }
+
+
+
+        // 点击btn1 启动定时器
+        // btn1.onclick = function () {
+        //     // timerId后续其他函数也可能要用到 变成全局变量
+        //     timerId = setInterval(function () {
+        //         console.log('hello');
+        //     }, 1000)
+        // }
+        //   点击btn2停止定时器
+        // btn2.onclick = function () {
+        //     // 停止周期性定时器
+        //     clearInterval(timerId)
+        // }
+
+
+
+        // var arr = [1,2,3,4];
+        // alert('hello');
+        // prompt('请输入')
+        // var res = confirm('确定要删除吗？');
+        // console.log(res);
+
+
+    </script>
+</body>
+
+</html>

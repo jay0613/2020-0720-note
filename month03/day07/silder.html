@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>轮播图</title>
+    <style>
+        /* 父容器 */
+        #sildeBar{
+            width: 739px;
+            height: 419px;
+            position: relative;
+        }
+        /* 所有要轮播的图片 */
+        #sildeBar>img{
+            position: absolute;
+            top: 0;
+            z-index: 1;
+            opacity: 0;
+            transition: all 0.5s;
+        }
+        /* 要显示的图片 */
+        #sildeBar>img.active{
+            opacity: 1;
+            z-index: 2;
+        }
+        /* 左右小箭头 */
+        #ll,#rr{
+            position: absolute;
+            z-index: 6;
+            top:50%;
+            margin-top: -20px;
+        }
+        #rr{
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="sildeBar">
+        <img class="item active" src="../imgs/gm1-6.jpg" alt="">
+        <img class="item" src="../imgs/gm2-6.jpg" alt="">
+        <img class="item" src="../imgs/gm3-6.jpg" alt="">
+        <img class="item" src="../imgs/gm4-6.jpg" alt="">
+        <img class="item" src="../imgs/gm5-6.jpg" alt="">
+        <div>
+            <img id="ll" src="../imgs/l1-6.png" alt="">
+            <img id="rr" src="../imgs/r1-6.png" alt="">
+        </div>
+    </div>
+
+    <script>
+        // 16:59~17:15
+        var ll = document.getElementById('ll');
+        var rr = document.getElementById('rr');
+        // 点击左侧箭头时 向左切换图片
+        // 1-->5-->4  3  2  1  5
+        var i = 0;//第几张图片
+        // 找到当前的i所表示的图片对象  移除class active
+        // 找到下一个i所表示的图片对象  添加class active
+        var imgs = document.getElementsByClassName('item');
+        ll.onclick = function(){
+            imgs[i].className = 'item';
+            // 求下一个图片的i
+            i--;//向左移动索引值
+            if(i==-1){
+                // 如果是第一张图向左移动 切换到最后一张
+                i = imgs.length-1;
+            }
+            imgs[i].className = 'item active';
+        }
+        rr.onclick = function(){
+            imgs[i].className = 'item';
+            i++;
+            if(i == imgs.length){
+                i = 0;
+            }
+            imgs[i].className = 'item active';
+        }
+
+        // 使用周期性定时器 每隔1.5s自动向右切换图片
+        var timer = setInterval(rr.onclick,1500);
+        // 鼠标移动到图片或左右小箭头时  停止定时器
+        // 鼠标移出图片或左右小箭头时  启动定时器
+        // onmouseover鼠标移入 onmouseout鼠标移出
+
+        var sildeBar = document.getElementById('sildeBar');
+        sildeBar.onmouseover = function(){
+            clearInterval(timer)
+        }
+        sildeBar.onmouseout = function(){
+            timer = setInterval(rr.onclick,1500);
+        }
+    </script>
+</body>
+</html>

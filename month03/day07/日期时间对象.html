@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>datetime</title>
+</head>
+<body>
+    <h1 id="timeBox"></h1>
+    <script>
+        var h1 = document.getElementById("timeBox")
+        var timer = setInterval(function(){
+        var now = new Date();
+    //     // Fri Jul 31 2020 10:17:04 GMT+0800 (中国标准时间)
+    //     // document.write(now)
+    //     var y = now.getFullYear()   //获取年
+    //     var m =  now.getMonth()   //获取月份 0-11
+    //     var date = now.getDate()   // 获取日期
+    //     var day = now.getDay()       //获取星期
+    //    var h =  now.getHours()     //获取小时
+    //     var min = now.getMinutes()   //获取分钟
+    //     var sec = now.getSeconds()   //获取秒
+    //     document.write(m,"--",day)
+        // 定时器
+   
+    //Thu Oct 01 2020 12:00:00 GMT+0800 (中国标准时间)
+    var f = new Date("2020/07/31 18:00:00")   
+        // 获取指定时间的毫秒数  
+        // console.log(f)
+        // console.log(f.getTime())   
+        // console.log(now.getTime())
+
+        var leftTime =  parseInt((f.getTime()-now.getTime())/1000)
+        // console.log(leftTime)
+        if(leftTime<=0){
+            clearInterval(timer);
+            h1.innerHTML = "倒计时结束，请重新开始"
+            return
+
+        }
+        
+
+        // xiaoshi = Math.floor(leftTime/3600)   //获取小时
+        // min = Math.floor((leftTime-xiaoshi*3600)/60)
+        // sec = Math.floor(leftTime-xiaoshi*3600-min*60)
+        var xiaoshi = parseInt(leftTime/3600)
+        if(xiaoshi<10){
+            xiaoshi = "0"+xiaoshi
+        }
+        var min = parseInt(leftTime % 3600 /60)
+        if(min<10){
+            min = "0"+min
+        }
+       var sec = leftTime%60
+        if(sec<10){
+            sec = "0"+sec
+        }
+        h1.innerHTML=`距离18点还有 ${xiaoshi}:${min}:${sec}`
+        // console.log(`距离18点还有 ${xiaoshi}:${min}:${sec}`)
+},1000)
+
+
+    </script>
+</body>
+</html>

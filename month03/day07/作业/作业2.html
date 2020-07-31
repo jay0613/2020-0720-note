@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            width: 739px;
+            height: 419px;
+            position: relative;
+        }
+        #d2{
+            position: absolute;
+            left: 10px;
+            top: 186px;
+        }
+        #d2,#d3:hover{
+            cursor: pointer;
+        }
+        #d3{
+            position: absolute;
+            right: 10px;
+            top: 186px;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <img id="d1" src="imgs/gm1-6.jpg" alt="">
+        <img id="d2" src="imgs/l1-6.png" alt="">
+        <img id="d3" src="imgs/r1-6.png" alt="">
+    </div>
+    <script>
+        var d1 = document.getElementById("d1")
+        var left = document.getElementById("d2")
+        var right = document.getElementById("d3")
+        var num = 1
+        var timerID = setInterval(
+            function(){
+                if(num==1){num=5}
+            else{num--}
+            d1.src = "imgs/gm"+num+"-6.jpg"
+            },3000
+        )
+
+        left.onclick = function(){
+            if(num==1){num=5}
+            else{num--}
+            d1.src = "imgs/gm"+num+"-6.jpg"
+        } 
+        right.onclick = function(){
+            if(num==5){num=1}
+            else{num++}
+            d1.src = "imgs/gm"+num+"-6.jpg"
+        }
+    </script>
+</body>
+</html>

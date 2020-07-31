@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>日期时间对象</title>
+</head>
+<body>
+    <script>
+        var now = new Date();
+        console.log(now);
+
+        // 获取时间日期 getXXX
+        var y = now.getFullYear()//获取年
+        var m = now.getMonth()//获取月份 0~11
+        var d = now.getDate()//获取日期
+        console.log(`${y}/${m+1}/${d}`);
+        now.getDay()//获取星期
+        now.getHours()//获取小时 
+        now.getMinutes()//获取分钟
+        now.getSeconds()//获取秒钟
+
+        // 设置时间日期 setXXX
+        // 获取指定的时间日期对象
+        var f = new Date('2020-10-01 12:00:00')
+        console.log(f)
+
+        console.log(now.getTime());
+        console.log(f.getTime());
+        
+        // 获取当前时间和指定日期对象的时间差(毫秒)  1000ms = 1s
+        // var leftTime = f.getTime() - now.getTime();
+        var leftTime = f-now;
+        console.log(leftTime);
+
+        
+
+    </script>
+</body>
+</html>
