@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>事件处理</title>
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        // window.onload = function(){
+        //     // 页面元素全部加载完成  之后 执行 的功能
+           
+        // } 
+        $(function(){
+            $("#d1").css('color','red')
+        })
+    </script>
+</head>
+<body>
+    <div id="d1"></div>
+    <script>
+        $(function(){
+            // 为按钮设置 鼠标单击效果
+            // 事件委托 
+            // 如果想要设置事件的元素是动态生成的元素要注意顺序()
+            // 将事件委托给被绑定事件元素的祖先元素(页面中已有的)
+            // 当祖先元素的事件被触发之后 
+            // 会检测是否是指定后代元素触发的内容 
+            // 如果是 执行事件处理函数  不是 就不执行
+            $('body').on('click','#btn',function(){
+                alert('hello')
+            })
+
+            // 向页面添加一个按钮id=btn
+            $('body').append('<button id="btn">click me</button>')
+            
+        })
+            
+
+        // // 在body中新增元素button
+        // $('body').append('<button id="btn">click me</button>')
+        // // 为该button绑定单击事件
+        // $(function(){$('#btn').on('click',function(){alert('你好啊')})})
+       
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>缩放</title>
+    <style>
+        img{
+            transition: all 0.5s;
+        }
+        img:hover{
+            transform: scale(1.1);
+        }
+        div{
+            height: 2000px;
+        }
+    </style>
+</head>
+<body>
+    <img src="../static/images/b04.jpg" width="300px" alt="">
+    <div >
+
+    </div>
+
+    <script src="../static/js/jquery.min.js"></script>
+    <script>
+        $(document).scroll(function(){
+            // 滚动条滚动事件
+            // console.log("我滚啦")
+            // 获取滚动条相对顶端的距离（蓝色）
+            var scrollTop = $(document).scrollTop()
+            console.log(scrollTop)
+            // 获取可视范围高度（黄色）
+            var windowHeight = $(window).height()
+            console.log(windowHeight)
+            // 获取完整文档高度（红色）
+            var documentHeight = $(document).height()
+            console.log(documentHeight)
+            // if(scrollTop+windowHeight==documentHeight){
+            //     console.log("到底啦")
+            // }
+
+            if(documentHeight-scrollTop -windowHeight <=200){
+                console.log("快到底了")
+            }
+        })
+    </script>
+</body>
+</html>

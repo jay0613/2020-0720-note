@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">删除</button>
+    <!-- <div id="title">hello</div> -->
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        // 作为子元素追加
+        $("body").append('<div id="title">hello</div>')
+        $("body").prepend('<div>hello haha</div>')
+        // 作为兄弟元素追加
+        $("#title").after('<div id="d1">我在下面</div>')
+        $("#title").before('<div id="d1">我在你上面</div>')
+        // 重写内容
+        // $("body").html("这里内容会全把body显示内容全覆盖")
+
+        //  # 删除id名为title的标签
+        $("#title").remove()
+
+
+
+    </script>
+</body>
+</html>

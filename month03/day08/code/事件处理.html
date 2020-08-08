@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 放在这里引入，代表提前引入，比body内容要快一点 -->
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        // window.onload = function(){
+        //     // 页面全部加载完成之后  执行的功能
+        //     $("#d1").html("hello")
+        // }
+        $(function(){
+            $("#d1").html("你好啊")
+        })
+    </script>
+</head>
+<body>
+    <div id="d1"></div>
+   
+    <script>
+        $(function{
+            // 为按钮设置 鼠标单机效果
+            $("#btn").click(function(){
+                alert("你好")
+            })
+
+            // 想页面添加一个按钮id=btn
+            $("body").append('<button id="btn">click me</button>')
+        })
+    </script>
+
+
+    <script>
+        // 此处的onload会覆盖上面的onload  
+        // window.onload = function(){
+        //     // 页面全部加载完成之后  执行的功能
+        //     $("#d1").css("color","red")
+        // }
+
+        $(function(){
+            $("#d1").css("color","red")
+        })
+    </script>
+   
+</body>
+</html>

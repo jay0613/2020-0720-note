@@ -1,0 +1,12 @@
+﻿学习过程
+    1.变量 基础数据类型  运算符
+    2.if switch while do-while  for   函数  作用域
+    3.内置对象  {}  {"name":"shibw"}
+                       array    string   RegExp  Math Date
+    4.BOM和DOM   
+                    BOM   弹框  定时器   history  location
+                    DOM  获取页面元素  修改内容  修改属性  修改样式
+     5.jQuery
+                    DOM操作  
+                    数据处理  
+	   事件绑定 $(function){})             $('parent').on('click','chlid',function(){})

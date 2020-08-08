@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>创建/添加/删除元素</title>
+</head>
+<body>
+    <button id="btn">remove</button>
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        // 点击btn 删除hell oworld
+        $('#btn').click(function(){
+            $('#title').remove()
+        })
+
+        // 16:00~16:15
+        // 作为子元素追加
+        $('body').append('<div id="title">hello world</div>')
+        $('body').prepend('<div>新创建的第一个小伙伴</div>')
+        // 作为兄弟元素追加 
+        $('#title').after('<div>楼下的兄弟 </div>')
+        $('#title').before('<div>楼上的兄弟 </div>')
+        // 重写内容
+        // $('body').html('nihao');
+    </script>
+</body>
+</html>

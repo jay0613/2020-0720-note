@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>操作页面元素属性</title>
+</head>
+<body>
+    <!-- <div id="d1"></div> -->
+    <form action=""  onsubmit="return checkForm()">
+        <div>
+            姓名 ： <input name="uname" type="text">
+        </div>
+        <div>
+            密码 ： <input name="pwd" type="password">
+        </div>
+        <div>
+            <input id="canLogin" type="checkbox">阅读并同意<a href="#">协议</a>
+        </div>
+        <button id="btn">登录</button>
+        <!-- <input id="btn" type="submit" value="登录"> -->
+    </form>
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        // 14:51~15:05
+
+        // form表单 数据提交时会检查onsubmit属性的值 如果返回值为false则阻止本次提交 如果返回值为true 允许提交
+        function checkCanLoad(){
+            // 检测复选框是否被选中
+            return $('#canLogin').prop('checked')
+        }
+
+        function checkPassword(){
+            // 检测密码是否符合规则
+            return true;
+        }
+        function checkUname(){
+            // 检测用户名是否符合规则
+            return true;
+        }
+        function checkForm(){
+            // 检测表单数据能否提交
+            // console.log(checkCanLoad()&&checkUname()&&checkPassword())
+            return checkCanLoad()&&checkUname()&&checkPassword();
+        }
+    </script>
+
+
+
+    <script>
+        // 当按钮被点击时  
+        // 如果 用户勾选同意协议 就弹框ok
+        // 如果用户没有勾选 提示请阅读协议
+        // $('#btn').click(function(){
+        //     // console.log($('#canLogin'));
+        //     // console.log($('#canLogin').prop('checked')); 
+        //     // attr获取的是标签内部已经定义好的属性
+        //     // prop获取的是标签原型内部的属性
+        //     $('#canLogin').prop('checked')?alert('ok'):alert('请阅读协议')
+        // })
+
+        // // 获取属性的值
+        // console.log($('div').prop('id'))
+        // // 修改/设置属性的值
+        // $('div').prop('id','title')
+        // console.log($('div').attr('id'))
+    </script>
+</body>
+</html>

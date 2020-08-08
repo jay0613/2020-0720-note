@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="key">
+    <h1></h1>
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        // 当用户输入内容时，将用户输入的内容放在下方的h1中显示
+        // change当值发生改变的时候触发，例如输入完之后鼠标点一下外面
+    //    $("#key").change(function(){
+    //     //    将文本框输入的内容放入h1显示
+    //     $("h1").html($("#key").val())
+    //    })
+
+       $("#key")[0].oninput = function(){
+        //    将文本框输入的内容放入h1显示
+        $("h1").html($("#key").val())
+       }
+   
+
+
+
+    //   oninput当用户输入内容时触发的时间 
+    </script>
+
+</body>
+</html>

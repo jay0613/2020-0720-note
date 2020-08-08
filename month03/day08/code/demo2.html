@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>右下角小广告</title>
+    <style>
+        div{
+            width: 200px;
+            height: 300px;
+            background-color: red;
+            position: fixed;
+            right: 3px;
+            bottom: -301px;
+            /* display: none; */
+            transition: all 1s;
+        }
+        .show{
+            bottom: 0;
+        }
+        b{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="$">
+        <b>关闭</b>
+    </div>
+    <script>
+        // 找到b标签  点击移除div的class show
+        var b = document.getElementsByTagName('b')[0];
+        b.onclick = function(){
+            div.className = '';
+            var timer = setTimeout(function(){
+                div.setAttribute('class','show');
+            },5000)
+        }
+
+        var div = document.getElementById('$');
+        // 3s之后为div添加class show
+        var timer = setTimeout(function(){
+            div.setAttribute('class','show');
+        },3000)
+    </script>
+</body>
+</html>

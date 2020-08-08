@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 休息10:00~10:15 */
+        ul,li{
+            padding: 0;
+            margin: 0;
+            /* 父元素和子元素一同浮动时 父元素的边框可以直接包住子元素 */
+            float: left;
+        }
+        ul{
+            list-style: none;
+        }
+        .first{
+            color: #666;
+            margin: 5px 0;
+        }
+        ul{
+            border: 1px solid red;
+        }
+        .items{
+            margin: 5px 15px;
+            padding: 0 5px;
+            transition: all 0.3s;
+        }
+        .items:hover{
+            background-color: #f00;
+            color: #fff;
+            cursor: pointer;
+        }
+        .active{
+            background-color: #f00;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li class="first">难度：</li>
+        <li class="items">全部</li>
+        <li class="items">初级</li>
+        <li class="items active">中级</li>
+        <li class="items">高级</li>
+    </ul>
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        $('.items').click(function(){
+            $(this).toggleClass('active')
+            console.log($(this))
+            // $('.items').removeClass('active'
+            // $(this).addClass('active').siblings().removeClass('active')
+        })
+
+        // var items = document.getElementsByClassName('items')
+        // for(var i = 0;i<items.length;i++){
+        //     items[i].onclick = function(){
+        //         for(var i = 0;i<items.length;i++){
+        //             items[i].setAttribute('class','items')
+        //         }
+        //         this.setAttribute('class','items active')
+        //     }
+        // }
+
+
+
+
+
+    </script>
+
+</body>
+</html>

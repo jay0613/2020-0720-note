@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>查找页面元素</title>
+</head>
+<body>
+    <div>
+        <h1 id="title">登鹤雀楼</h1>
+        <ul>
+            <li class="item">白日依山尽</li>
+            <li class="item">黄河入海流</li>
+            <li>欲穷千里目</li>
+            <li>更上一层楼</li>
+        </ul>
+        <li>hello</li>
+    </div>
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        // 给id为title的元素设置css样式的color为red,再设置文本居中
+        $("#title").css("color","red").css("text-align","center");  
+        // 所有类名为item的background-color属性设置为yellow
+        $(".item").css("background-color","yellow");
+        // 找到item类的后面的第一个li  设置字体放大变红
+        $(".item+li").css("color","red").css("font-size","30px");
+        // item 后的所有li居中
+        $(".item~li").css("text-align","center");
+
+        // 找到第一个类名为item的background-color属性设置为yellow
+        $(".item:first").css("background-color","yellow");
+         // 找到最后一个类名为item的background-color属性设置为yellow
+         $(".item:last").css("background-color","yellow");
+
+        //  
+         $("li:odd").css("background-color","yellow");
+         $("li:even").css("background-color","yellow");
+         $("li:eq(3)").css("background-color","yellow");
+         $("li:lt(3)").css("background-color","yellow");
+
+        //  找到除了第一个以外的所有li,设置字体为30px
+        $("li:not(li:first)").css("font-size","30px");
+
+        // 找到除了类名为item以外的所有li,设置字体为30px
+        $("li:not(.item)").css("font-size","30px");
+
+        
+    </script>
+</body>
+</html>

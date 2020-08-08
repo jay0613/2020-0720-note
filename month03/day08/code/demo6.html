@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>动画效果</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <button class="btn1">隐藏</button>
+    <button class="btn2">上推</button>
+    <button class="btn3">淡隐</button>
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        // 当btn1被单击时 
+        // 如果按钮的内容是隐藏  调用hide()隐藏div 将按钮的内容改为显示 
+        // 如果按钮为显示  调用show() 将按钮的内容变为隐藏
+        $('.btn1').click(function(){
+            if($(this).text() == '隐藏'){
+                $('div').hide(3000,function(){
+                    // 当内容隐藏之后执行
+                    $('.btn1').text('显示');
+                });
+            }else{
+                $('div').show(3000,function(){
+                    $('.btn1').text('隐藏');
+                });
+            }
+        })
+        $('.btn2').click(function(){
+            if($(this).text() == '上推'){
+                $('div').slideUp(3000,function(){
+                    // 当内容隐藏之后执行
+                    $('.btn2').text('下拉');
+                });
+            }else{
+                $('div').slideDown(3000,function(){
+                    $('.btn2').text('上推');
+                });
+            }
+        })
+        $('.btn3').click(function(){
+            if($(this).text() == '淡隐'){
+                $('div').fadeOut(3000,function(){
+                    // 当内容隐藏之后执行
+                    $('.btn3').text('淡现');
+                });
+            }else{
+                $('div').fadeIn(3000,function(){
+                    $('.btn3').text('淡隐');
+                });
+            }
+        })
+    </script>
+</body>
+</html>

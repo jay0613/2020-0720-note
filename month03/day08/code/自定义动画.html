@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #ball{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div id="ball"></div>
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        $("#ball").animate({
+            // 出去时候的样式
+            "margin-left":"500px",
+            "width":"100px"
+        },2000,function(){
+            // 回来时候的样式
+            $("#ball").animate({
+            "margin-left":"0px",
+            "width":"200px"
+        },2000,function(){
+            // 回来后的淡隐效果
+            $("#ball").fadeOut(2000)
+        })
+        })
+    </script>
+</body>
+</html>

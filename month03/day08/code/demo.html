@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="d1"></div>
+    <p id="p1"></p>
+    <span id="s1"></span>
+
+    <!-- 导入jQuery文件 -->
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        // DOM对象/原生JS对象
+        // 可以使用JS提供的方法和属性 innerHTML  setAttribute()
+        var div = document.getElementById('d1');
+        console.log(div);
+        // div.innerHTML = 'hello';
+        // js对象 --> jq对象 可以使用jq对象提供的方法
+        $(div).html('hello  world')
+        // this 当前的JS对象 $(this)才能使用jq提供的方法
+
+        // jq对象  可使用jQuery提供的方法和属性 
+        var $div = $('#d1');
+        console.log($div);
+        // $div.html('hello');
+        // jq对象中 索引值为0的位置保存着js对象 
+        // jq对象 --> js对象
+        $div[0].onclick = function(){
+            alert('hello world');
+        }
+
+    </script>
+
+
+    <script>
+        // 休息9:46~10:00   下载day08.zip
+        // function $$(id){
+        //     return document.getElementById(id)
+        // }
+        // $$('d1').innerHTML = 'hello';
+        // var d1 = document.getElementById('d1');
+        // d1.innerHTML = 'hello'
+    </script>
+</body>
+</html>

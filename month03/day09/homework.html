@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>级联下拉菜单</title>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/data.js"></script>
+</head>
+<body>
+    <select name="" id="prov">
+        
+    </select>
+    <select name="" id="city"></select>
+    <select name="" id="area"></select>
+
+    <script>
+        console.log(data);
+        //初始化页面结构
+        $('#prov').html('<option value="0">请选择</option>');
+        $('#city').html('<option value="0">请选择</option>');
+        $('#area').html('<option value="0">请选择</option>'); 
+        // 显示省份下拉菜单的内容
+        $.each(data,function(i,o){
+            // console.log(o.provname)//省份名
+            $('#prov').append(`<option value="${o.provId}">${o.provname}</option>`)
+        })
+        // 省份选择完成后 加载省份对应的城市
+        $('#prov').on('change',function(){
+            // console.log($(this).val())
+            // 遍历数据 通过值找到当前的省份
+            // 获取当前省份对应的城市数组,遍历数组的对象添加到页面上
+            // 休息10:05~10:20
+            $.each(data,function(i,o){
+                if(o.provId == $('#prov').val()){
+                    // 初始化城市菜单
+                    $('#city').html('<option value="0">请选择</option>');
+                    // 添加新的省份对应的城市
+                    $.each(o.citys,function(i,o2){
+                        $('#city').append(`<option value="${o2.cityId}">${o2.cityname}</option>`)
+                    })
+                }
+            })
+        
+            // 省份菜单初始化以后(请选择) 城市菜单初始化
+            if($('#prov').val() == 0){
+                $('#city').html('<option value="0">请选择</option>');
+            }
+            if($('#city').val() == 0){
+                $('#area').html('<option value="0">请选择</option>');
+            }
+        })
+    
+        // 城市选择完成后 加载城市对应的地区 
+        $('#city').on('change',function(){
+            // data-->prov-->city-->area
+            $('#area').html('<option value="0">请选择</option>');
+            $.each(data,function(i,p){
+                if(p.provId == $('#prov').val()){
+                    // 如果是当前省份 找城市
+                    // 10:32~10:35
+                    $.each(p.citys,function(i,c){
+                        if(c.cityId == $('#city').val()){
+                            // 找当前城市对应的地区
+                            // 将地区加载到页面上
+                            $('#area').html('<option value="0">请选择</option>');
+                            $.each(c.areas,function(i,a){
+                                $('#area').append(`<option value="${a.areaId}">${a.areaname}</option>`)
+                            })
+                        }
+                    })
+                }
+            })
+            // if($('#city').val() == 0){
+            //     $('#city').html('<option value="0">请选择</option>');
+            // }
+        })
+    </script>
+</body>
+</html>

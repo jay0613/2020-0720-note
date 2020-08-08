@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>查找页面元素</title>
+</head>
+<body>
+    <div>
+        
+        <h1 id="title">登鹳雀楼</h1>
+        <ul>
+            <li class="item">白日依山尽</li>
+            <li class="item">黄河入海流</li>
+            <li >欲穷千里目</li>
+            <li>更上一层楼</li>
+        </ul>
+        <!-- <li>hello</li> -->
+    </div>
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        // $('#title').css('color','red').css('text-align','center');
+        // // 所有带有item的元素背景颜色 yellow
+        // // console.log($('.item'))
+        // $('.item').css('background-color','yellow');
+        // // 找到item类的后面的第一个兄弟元素如果是li 字体放大变红
+        // $('.item+li').css('font-size','30px').css('color','red');
+        // // <!-- 11:04~11:20 -->
+        // // $('#title+li').css('color','blue')
+        // // item后的所有的li居中
+        // $('.item~li').css('text-align','center');
+
+        // $('.item:first').css('text-align','center');
+        // $('li:last').css('background-color','pink');
+        
+        // 按索引值匹配
+        $('li:odd').css('color','red');
+        $('li:even').css('color','blue');
+
+        // 等于 
+        $('li:eq(3)').css('background-color','pink');
+        // 小于 
+        $('li:lt(3)').css('background-color','orange');
+
+        // 找除了第一个以外的所有li
+        // $('li:not(li:first)').css('font-size','20px')
+        // 除了item以外的所有li
+        $('li:not(.item)').css('font-size','20px')
+    </script>
+</body>
+</html>
