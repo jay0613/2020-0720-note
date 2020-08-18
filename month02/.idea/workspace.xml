@@ -2,14 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a976345a-394f-41e4-b012-34d7573639e2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../lyj/django/day01/mysite1/mysite1/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lyj/django/day01/mysite1/mysite1/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lyj/django/day02/mysite2/mysite2/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lyj/django/day02/mysite2/templates/test_cal.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lyj/django/day02/mysite2/templates/test_html.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lyj/django/day05/mysite4/bookstore/templates/bookstore/all_book.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lyj/django/day05/mysite4/bookstore/templates/bookstore/update_book.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lyj/django/day05/mysite4/bookstore/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lyj/django/day06/bookMgr/bookstore/templates/bookstore/add_book.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lyj/django/day06/bookMgr/bookstore/templates/bookstore/all_book.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lyj/django/day06/bookMgr/bookstore/templates/bookstore/update_book.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lyj/django/day06/bookMgr/bookstore/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lyj/django/day06/mysite6/mysite6/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lyj/django/day07/boke/user/templates/user/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lyj/django/day07/boke/user/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lyj/django/day07/mysite7/mysite7/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lyj/django/day07/wiki/note/templates/note/add_note.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lyj/django/day07/wiki/note/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lyj/django/day07/wiki/user/templates/user/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lyj/django/day07/wiki/user/templates/user/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lyj/django/day07/wiki/user/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../month01" beforeDir="false" afterPath="$PROJECT_DIR$/../month01" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/葵花宝典/2.os和shutil模块.py" beforeDir="false" afterPath="$PROJECT_DIR$/葵花宝典/2.os和shutil模块.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/葵花宝典/1.dict各种方法.py" beforeDir="false" afterPath="$PROJECT_DIR$/葵花宝典/1.dict各种方法.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
