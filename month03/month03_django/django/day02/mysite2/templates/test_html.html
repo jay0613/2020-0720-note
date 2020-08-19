@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Templates Demo</title>
+</head>
+<body>
+<h1>姓名:{{ name }}</h1>
+<h1>年龄:{{ age }}</h1>
+<h1>爱好:{{ hobby.0 }}</h1>
+<h3>成绩：{{ scores }} | {{scores.语文}}</h3>
+<h1>类对象.方法:{{ person.show }}</h1>
+<h1>函数:{{ func1 }}</h1>
+<!--<h1>写JS脚本: {{ script | safe }}</h1>-->
+
+{% if age >= 18 %}
+    <p>你已经长大了,{{ age }}岁了</p>
+{% else %}
+    <p>青春少年,,{{ age }}岁了</p>
+{% endif %}
+
+
+{% for h in hobby %}
+    <p>{{ forloop.counter }}{{ h }}</p>
+{% empty %}
+    <p>这个人没有爱好</p>
+{% endfor %}
+</body>
+</html>
