@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSON测试</title>
+</head>
+<script src="/static/js/jquery-1.11.3.js"></script>
+<body>
+    <button onclick="showJson()">Test Json</button>
+<script>
+    function showJson(){
+
+        /*
+        var obj = {
+            'uname':'tedu',
+            'age':18,
+        }
+        console.log('uname:'+obj.uname);
+        console.log('age:'+obj.age);
+        */
+
+        var json_arr = [
+            {
+            "uname":"tarena",
+            "age":18
+            },
+            {
+            "uname":"danei",
+            "age":22
+            }
+        ]
+        // jq的遍历方法１
+        $(json_arr).each(function(index,obj){
+            console.log("索引：",index)
+            console.log("name：",obj.uname)
+            console.log("age：",obj.age)
+        });
+        //jq的遍历方法２
+        $.each(json_arr,function(index,obj){
+            console.log("索引：",index)
+            console.log("name：",obj.uname)
+            console.log("age：",obj.age)
+        });
+
+    }
+</script>
+
+</body>
+</html>

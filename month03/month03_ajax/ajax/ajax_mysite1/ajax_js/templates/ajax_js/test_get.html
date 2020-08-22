@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js_get测试</title>
+</head>
+<script src="/static/js/common.js"></script>
+<body>
+    <button onclick="getXhl()">getxhr</button>
+    <div id="show"></div>
+    <script>
+        function getXhl(){
+           // １创建xhr对象,createXhr()是从common.js导入的,主要判断一下是什么浏览器，生成的xhr不一样
+           xhr = createXhr()
+           // 2 创建请求
+           xhr.open('GET','/ajax_js/xhr_get_server',true);
+           //3 添加事件处理函数（回调函数）
+           //当onreadystatechange事件产生时,执行function函数
+           xhr.onreadystatechange = function(){
+                if(xhr.readyState == 4 && xhr.status == 200){
+                    document.getElementById('show').innerHTML = xhr.responseText;
+                }
+           }
+            //4 发送请求
+            xhr.send(null)
+        }
+    </script>
+</body>
+</html>
